@@ -1,0 +1,18 @@
+@import "base";
+@import "components";
+
+header, main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1140px;
+}
