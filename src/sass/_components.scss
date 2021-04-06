@@ -1,7 +1,405 @@
 @import "base";
 
+//Hero
+
+.hero img {
+  max-width: 100%;
+}
+
+.hero-info {
+  margin: 20px 0;
+
+  text-align: justify;
+  color: $text-color;
+
+  font-size: 20px;
+}
+
+// Slider
+
+.container.slider {
+
+  background-color: $slider-background-color;
+  min-height: 440px;
+
+}
+
+.slider-title {
+
+  color: $text-color;
+  text-align: center;
+}
+
+.slider-boxes {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0 50px 0;
 
 
+}
+.slider-boxes__box {
+  width: 240px;
+  height: 240px;
+  margin: 0 15px;
+
+  opacity: 0.8;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  transition: all 0.5s linear;
+
+  &.box1 {
+    background-image: url('../assets/slider-img1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &.box2 {
+    background-image: url('../assets/slider-img2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &.box3 {
+    background-image: url('../assets/slider-img3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .slider-boxes__text {
+    color: $sliderbox-text-color;
+
+  }
+
+  &:hover {
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    font-size: 36px;
+
+
+  }
+
+}
+
+//Animated info
+
+
+.container.circles {
+  height: 650px;
+
+}
+
+.circles-title {
+  text-align: center;
+  color: $text-color;
+}
+
+.circles-field {
+  margin-top: 50px;
+  color: $circles-text-color;
+  font-size: 24px;
+  text-align: center;
+  height: 545px;
+
+
+  .circles1-left {
+    width: 240px;
+    height: 240px;
+    background-color: $circle1-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle1-background-color,15%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 15px;
+    left: 650px;
+
+
+  }
+
+  .circles1-right {
+    width: 125px;
+    height: 125px;
+
+    background-color: $circle-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle-background-color,15%);
+
+    position: relative;
+    top: -200px;
+    right: 0;
+    bottom: 0;
+    left: 840px;
+    z-index: -1;
+
+  }
+
+
+  .circles2-left {
+
+    width: 150px;
+    height: 150px;
+    background-color: $circle2-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle2-background-color,15%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -160px;
+    left: 900px;
+
+  }
+
+  .circles2-right {
+    width: 125px;
+    height: 125px;
+
+    background-color: $circle-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle-background-color,15%);
+
+    position: relative;
+    top: -295px;
+    left: 1005px;
+    z-index: -1;
+
+  }
+
+  .circles3-left {
+
+    width: 170px;
+    height: 170px;
+    background-color: $circle3-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle3-background-color,15%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -410px;
+    left: 440px;
+
+  }
+
+  .circles3-right {
+    width: 125px;
+    height: 125px;
+
+    background-color: $circle-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle-background-color,15%);
+
+    position: relative;
+    top: -540px;
+    left: 350px;
+    z-index: -1;
+
+  }
+
+  .circles4-left {
+
+    width: 130px;
+    height: 130px;
+    background-color: $circle4-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle4-background-color,15%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -640px;
+    left: 90px;
+
+  }
+
+  .circles4-right {
+    width: 125px;
+    height: 125px;
+
+    background-color: $circle-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle-background-color,15%);
+
+    position: relative;
+    top: -940px;
+    left: 40px;
+    z-index: -1;
+
+  }
+
+  .circles5-left {
+
+    width: 160px;
+    height: 160px;
+    background-color: $circle5-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle5-background-color,15%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -1150px;
+    left: 280px;
+
+  }
+
+  .circles5-right {
+    width: 125px;
+    height: 125px;
+
+    background-color: $circle-background-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($circle-background-color,15%);
+
+    position: relative;
+    top: -990px;
+    left: 700px;
+    z-index: -1;
+
+  }
+
+}
+
+
+//Details
+
+.container.details{
+  background: url(../assets/details-background.png) no-repeat center;
+  background-size: cover;
+  min-height: 400px;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  position: relative;
+
+  .details-title {
+    color: $text-color;
+  }
+
+  .details-circle1 {
+    width: 125px;
+    height: 125px;
+
+    background: $details-circle1-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($details-circle1-color,15%);
+
+    position: absolute;
+    top: -40px;
+    left: 200px;
+    opacity: 0.8;
+
+  }
+
+  .details-circle2 {
+    width: 125px;
+    height: 125px;
+
+    background: $details-circle2-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($details-circle2-color,15%);
+
+    position: absolute;
+    top: 30px;
+    left: 560px;
+    opacity: 0.75;
+
+  }
+
+  .details-circle3 {
+    width: 125px;
+    height: 125px;
+
+    background: $details-circle3-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($details-circle3-color,15%);
+
+    position: absolute;
+    top: 160px;
+    left: 900px;
+    opacity: 0.7;
+
+  }
+
+  .details-circle4 {
+    width: 125px;
+    height: 125px;
+
+    background: $details-circle4-color;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px darken($details-circle4-color,15%);
+
+    position: absolute;
+    top: 220px;
+    left: 320px;
+    opacity: 0.65;
+
+  }
+
+}
+
+
+//Footer
+
+.container.footer {
+  background-color: $footer-background-color;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  .footer-content {
+    color: $text-color;
+    font-size: 18px;
+  }
+}
 
 
 

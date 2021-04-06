@@ -1,9 +1,10 @@
 import React from 'react';
+import MainPage from "../MainPage";
 
 const App = () => (
-        <div>
-            <h1>Test</h1>
-        </div>
+
+    <MainPage/>
+
 )
 
 export default App;
