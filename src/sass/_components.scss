@@ -131,6 +131,21 @@
     top: 15px;
     left: 650px;
 
+    transition: all 0.3s linear;
+
+    &.active {
+      width: 75%;
+      height: 65%;
+      top: 0;
+      left: 150px;
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+    }
 
   }
 
@@ -292,8 +307,9 @@
     z-index: -1;
 
   }
-
 }
+
+
 
 
 //Details

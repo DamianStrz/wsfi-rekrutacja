@@ -3,12 +3,20 @@ import React from 'react';
 
 const AnimatedInfo = () => {
 
+    const onClick = (e) => {
 
-    return (
+        e.target.classList.toggle('active');
+
+    }
+
+
+    return(
         <div className='container circles'>
             <h1 className='circles-title'>Zasady rekrutacji</h1>
             <div className='circles-field'>
-                <div className='circles1-left'>Wymagane dokumenty</div>
+                <div className='circles1-left' id='firstCircle' onClick={onClick}>
+                    Wymagane dokumenty
+                </div>
                 <div className='circles1-right'/>
                 <div className='circles2-left'>Formularz<br/> rekrutacyjny</div>
                 <div className='circles2-right'/>
@@ -23,7 +31,7 @@ const AnimatedInfo = () => {
 
         </div>
     )
-
 }
+
 
 export default AnimatedInfo;
