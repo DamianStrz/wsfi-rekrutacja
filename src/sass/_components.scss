@@ -126,8 +126,6 @@
 
 
   .slide-content__img {
-    background: url(../assets/slider-img1.png) no-repeat center;
-    background-size: cover;
     min-width: 120px;
     min-height: 120px;
     margin: 20px;
@@ -139,6 +137,19 @@
     border-radius: 5%;
 
     box-shadow: inset 0 0 4px 4px $slider-background-color;
+
+    &.box-one {
+      background: url(../assets/slider-img1.png) no-repeat center;
+      background-size: cover;
+    }
+    &.box-two {
+      background: url(../assets/slider-img2.png) no-repeat center;
+      background-size: cover;
+    }
+    &.box-three {
+      background: url(../assets/slider-img3.png) no-repeat center;
+      background-size: cover;
+    }
 
   }
   .slide-content__title {
@@ -211,6 +222,10 @@
       justify-content: center;
       align-items: center;
       padding-top: 20px;
+
+      box-shadow: inset 0 0 2px 2px $circles-text-color
+
+
 
     }
 
@@ -462,6 +477,8 @@
   font-size: 1.3rem;
   padding: 0 5px;
   cursor: default;
+
+  animation: reveal 1.2s ease-in forwards;
 
   .circles-list__el {
     color: $text-color;

@@ -2,32 +2,70 @@ import React, {useState, useEffect} from 'react';
 
 const Slider = () => {
 
+    const data = {
+        titleBoxOne: 'Kierunek ekonomia, specjalność: Rachunkowość i finanse',
+        imgTitleBoxOne: "Rachunkowość i finanse",
+        textBoxOne: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam?',
+        titleBoxTwo: 'Kierunek ekonomia, specjalność: Bankowość',
+        imgTitleBoxTwo: "Bankowość",
+        textBoxTwo: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam?',
+        titleBoxThree: 'Kierunek ekonomia, specjalność: Przedsiębiorczość',
+        imgTitleBoxThree: "Przedsiębiorczość",
+        textBoxThree: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam?'
+    }
+
     const [slideData, setSlideData] = useState({
         isActive: false,
-        title: 'Kierunek ekonomia, specjalność: Rachunkowość i finanse',
-        imgTitle: "Rachunkowość i finanse",
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id molestias nostrum quidem rerum sequi suscipit veritatis? Cum iure, quam?'
     })
 
     const handleColorChange = (e) => {
-        setSlideData({...slideData, isActive: !slideData.isActive})
+
+
+        e.target.id === 'box-one' && setSlideData({...slideData,
+            isActive: !slideData.isActive,
+            imgTitle: data.imgTitleBoxOne,
+            title: data.titleBoxOne,
+            text: data.textBoxOne,
+            box: e.target.id
+        })
+
+        e.target.id === 'box-two' && setSlideData({...slideData,
+            isActive: !slideData.isActive,
+            imgTitle: data.imgTitleBoxTwo,
+            title: data.titleBoxTwo,
+            text: data.textBoxTwo,
+            box: e.target.id
+        })
+
+        e.target.id === 'box-three' && setSlideData({...slideData,
+            isActive: !slideData.isActive,
+            imgTitle: data.imgTitleBoxThree,
+            title: data.titleBoxThree,
+            text: data.textBoxThree,
+            box: e.target.id
+        })
+
 
         e.stopPropagation();
+
+
     }
+
+
 
 
     return(
 
-        <div className='container slider'>
+        <div className='container slider' >
             <h1 className='slider-title'>Specjalności na kierunku Ekonomia on-line</h1>
             <div className='slider-boxes'>
-                <div className='slider-boxes__box box1' onClick={handleColorChange}>
+                <div className='slider-boxes__box box1' onClick={handleColorChange} id='box-one'>
                     <span className='slider-boxes__text'>Rachunkowość i finanse</span>
                 </div>
-                <div className='slider-boxes__box box2'>
+                <div className='slider-boxes__box box2' onClick={handleColorChange} id='box-two'>
                     <span className='slider-boxes__text'>Bankowość</span>
                 </div>
-                <div className='slider-boxes__box box3'>
+                <div className='slider-boxes__box box3' onClick={handleColorChange} id='box-three'>
                     <span className='slider-boxes__text'>Przedsiębiorczość</span>
                 </div>
             </div>
@@ -40,9 +78,9 @@ const SlideContent = ({slideData}) => {
 
 
     return(
-        <div className='slide' >
+        <div className='slide'>
             <div className='slide-content'>
-                <div className='slide-content__img'>{slideData.imgTitle}</div>
+                <div className={`slide-content__img ${slideData.box}`}>{slideData.imgTitle}</div>
                 <div>
                     <h3 className='slide-content__title'>{slideData.title}</h3>
                     <p className='slide-content__text'>{slideData.text}</p>
