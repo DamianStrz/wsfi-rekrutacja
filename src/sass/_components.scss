@@ -166,8 +166,6 @@
 }
 
 
-
-
 //Animated info
 
 
@@ -208,7 +206,7 @@
     left: 650px;
     z-index: 1;
 
-    transition: all 0.5s linear;
+    transition: all 0.8s linear;
 
     &.active {
       width: 600px;
@@ -225,8 +223,13 @@
 
       box-shadow: inset 0 0 2px 2px $circles-text-color
 
+    }
 
-
+    &.inactive {
+      top: 0;
+      left: 500px;
+      opacity: 0;
+      cursor: none;
     }
 
   }
@@ -264,6 +267,8 @@
     height: 150px;
     background-color: $circle2-background-color;
 
+    cursor: pointer;
+
     border-radius: 50%;
     box-shadow: 0 4px 4px darken($circle2-background-color,15%);
 
@@ -277,11 +282,23 @@
 
     transition: all 1s linear;
 
+
+    &.active {
+      width: 600px;
+      height: 500px;
+      top: -380px;
+      left: 280px;
+      z-index: 2;
+
+      box-shadow: inset 0 0 2px 2px $circles-text-color
+
+    }
+
     &.inactive {
       top: -400px;
       left: 500px;
       opacity: 0;
-
+      cursor: none;
     }
 
  }
@@ -316,6 +333,8 @@
     height: 170px;
     background-color: $circle3-background-color;
 
+    cursor: pointer;
+
     border-radius: 50%;
     box-shadow: 0 4px 4px darken($circle3-background-color,15%);
 
@@ -329,10 +348,22 @@
 
     transition: all 1s linear;
 
+    &.active {
+      width: 600px;
+      height: 500px;
+      top: -640px;
+      left: 280px;
+      z-index: 2;
+
+      box-shadow: inset 0 0 2px 2px $circles-text-color
+
+    }
+
     &.inactive {
       top: -500px;
       left: 500px;
       opacity: 0;
+      cursor: none;
 
     }
 
@@ -368,6 +399,8 @@
     height: 130px;
     background-color: $circle4-background-color;
 
+    cursor: pointer;
+
     border-radius: 50%;
     box-shadow: 0 4px 4px darken($circle4-background-color,15%);
 
@@ -381,10 +414,22 @@
 
     transition: all 1s linear;
 
+    &.active {
+      width: 600px;
+      height: 500px;
+      top: -950px;
+      left: 280px;
+      z-index: 2;
+
+      box-shadow: inset 0 0 2px 2px $circles-text-color
+
+    }
+
     &.inactive {
       top: -800px;
       left: 500px;
       opacity: 0;
+      cursor: none;
 
     }
 
@@ -420,6 +465,8 @@
     height: 160px;
     background-color: $circle5-background-color;
 
+    cursor: pointer;
+
     border-radius: 50%;
     box-shadow: 0 4px 4px darken($circle5-background-color,15%);
 
@@ -433,10 +480,22 @@
 
     transition: all 1s linear;
 
+    &.active {
+      width: 600px;
+      height: 500px;
+      top: -1200px;
+      left: 280px;
+      z-index: 2;
+
+      box-shadow: inset 0 0 2px 2px $circles-text-color
+
+    }
+
     &.inactive {
       top: -1200px;
       left: 500px;
       opacity: 0;
+      cursor: none;
 
     }
 
