@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 
 const AnimatedInfo = () => {
@@ -15,7 +15,6 @@ const AnimatedInfo = () => {
     })
 
 
-
     const handleCircleClick = (e) => {
 
         if (e.target.id === 'firstCircle1') {
@@ -24,13 +23,6 @@ const AnimatedInfo = () => {
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
             rightCircles.forEach((el => el.classList.toggle('inactive')));
-
-            // document.getElementById('secondCircle1').classList.toggle('inactive');
-            // document.getElementById('secondCircle2').classList.toggle('inactive');
-            // document.getElementById('secondCircle3').classList.toggle('inactive');
-            // document.getElementById('secondCircle4').classList.toggle('inactive');
-            // document.getElementById('secondCircle5').classList.toggle('inactive');
-
 
             document.getElementById('firstCircle2').classList.toggle('inactive');
             document.getElementById('firstCircle3').classList.toggle('inactive');

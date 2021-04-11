@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 const Slider = () => {
 
@@ -35,7 +35,6 @@ const Slider = () => {
             text: data.textBoxOne,
             box: e.target.id
         });
-
 
 
         (e.target.id === 'box-two' && slideData.isActive === false) && setSlideData({...slideData,
