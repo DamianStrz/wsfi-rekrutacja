@@ -1,0 +1,25 @@
+@import 'base';
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large}) {
+    @content
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: #{$xlarge}) {
+    @content
+  }
+}

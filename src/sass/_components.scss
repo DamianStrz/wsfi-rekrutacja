@@ -1,4 +1,5 @@
 @import "base";
+@import "media";
 
 //Hero
 
@@ -13,6 +14,13 @@
   color: $text-color;
 
   font-size: 20px;
+
+  padding: 10px;
+
+  @include mobile {
+    font-size: 16px;
+    padding: 20px;
+  }
 }
 
 // Slider
@@ -33,6 +41,9 @@
 
   color: $text-color;
   text-align: center;
+  @include mobile {
+    padding: 20px;
+  }
 }
 
 .slider-boxes {
@@ -41,6 +52,11 @@
   margin: 30px 0 50px 0;
   width: 100%;
 
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+  }
 
 }
 .slider-boxes__box {
@@ -57,14 +73,22 @@
   justify-content: center;
   align-items: center;
 
-
   transition: all 0.5s linear;
+
+  @include mobile {
+    margin: 5px 5px;
+    width: 90%;
+    height: 50px;
+  }
+
+
 
   &.box1 {
     background-image: url('../assets/slider-img1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
   }
 
   &.box2 {
@@ -79,6 +103,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
   }
 
   .slider-boxes__text {
@@ -87,15 +112,18 @@
   }
 
   &:hover {
-    background-color: green;
     width: 240px;
     height: 240px;
     opacity: 1;
     font-size: 28px;
 
-
+    @include mobile {
+      width: 90%;
+      height: 50px;
+      opacity: 1;
+      font-size: 24px;
+    }
   }
-
 }
 
 @keyframes reveal {
@@ -147,20 +175,39 @@
     &.box-one {
       background: url(../assets/slider-img1.png) no-repeat center;
       background-size: cover;
+
+      @include mobile {
+        display: none;
+      }
+
+
     }
     &.box-two {
       background: url(../assets/slider-img2.png) no-repeat center;
       background-size: cover;
+
+      @include mobile {
+        display: none;
+      }
     }
     &.box-three {
       background: url(../assets/slider-img3.png) no-repeat center;
       background-size: cover;
+
+      @include mobile {
+        display: none;
+      }
     }
 
   }
 
   > div {
     pointer-events: none;
+
+    @include mobile {
+      padding: 20px;
+    }
+
   }
 
   .slide-content__title {
@@ -182,6 +229,12 @@
 
 .container.circles {
   height: 650px;
+  width: 100%;
+
+  @include mobile {
+    height: auto;
+    margin: 10px 0;
+  }
 
 }
 
@@ -195,7 +248,17 @@
   color: $circles-text-color;
   font-size: 24px;
   text-align: center;
+  width: 100%;
   height: 545px;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    height: auto;
+  }
 
 
   .circles1-left {
@@ -220,6 +283,20 @@
 
     transition: all 0.8s linear;
 
+    @include mobile {
+      position: relative;
+      left: auto;
+      top: auto;
+
+      font-size: 18px;
+
+      width: 90%;
+      height: 50px;
+
+      border-radius: 0;
+      margin: 5px 5px;
+    }
+
     &.active {
       width: 600px;
       height: 500px;
@@ -233,8 +310,23 @@
       align-items: center;
       padding-top: 20px;
 
+      box-shadow: inset 0 0 2px 2px $circles-text-color;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color
+      @include mobile {
+
+        position: relative;
+        left: auto;
+        top: auto;
+
+        font-size: 18px;
+
+        width: 90%;
+        height: 200px;
+
+        border-radius: 0;
+        margin: 5px 5px;
+
+      }
 
     }
 
@@ -243,6 +335,11 @@
       left: 500px;
       opacity: 0;
       cursor: none;
+
+      @include mobile {
+        height: 0;
+      }
+
     }
 
   }
@@ -271,6 +368,10 @@
       opacity: 0;
     }
 
+    @include mobile {
+      display: none;
+    }
+
   }
 
 
@@ -295,6 +396,20 @@
 
     transition: all 1s linear;
 
+    @include mobile {
+      position: relative;
+      left: auto;
+      top: auto;
+
+      width: 90%;
+      height: 50px;
+
+      font-size: 18px;
+
+      border-radius: 0;
+      margin: 5px 5px;
+    }
+
 
     &.active {
       width: 600px;
@@ -303,7 +418,23 @@
       left: 280px;
       z-index: 2;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color
+      box-shadow: inset 0 0 2px 2px $circles-text-color;
+
+      @include mobile {
+
+        position: relative;
+        left: auto;
+        top: auto;
+
+        font-size: 18px;
+
+        width: 90%;
+        height: 200px;
+
+        border-radius: 0;
+        margin: 5px 5px;
+
+      }
 
     }
 
@@ -312,6 +443,11 @@
       left: 500px;
       opacity: 0;
       cursor: none;
+
+      @include mobile {
+        height: 0;
+      }
+
     }
 
     .applicationFormLink {
@@ -350,6 +486,10 @@
       opacity: 0;
     }
 
+    @include mobile {
+      display: none;
+    }
+
   }
 
   .circles3-left {
@@ -373,6 +513,20 @@
 
     transition: all 1s linear;
 
+    @include mobile {
+      position: relative;
+      left: auto;
+      top: auto;
+
+      width: 90%;
+      height: 50px;
+
+      font-size: 18px;
+
+      border-radius: 0;
+      margin: 5px 5px;
+    }
+
     &.active {
       width: 600px;
       height: 500px;
@@ -380,7 +534,23 @@
       left: 280px;
       z-index: 2;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color
+      box-shadow: inset 0 0 2px 2px $circles-text-color;
+
+      @include mobile {
+
+        position: relative;
+        left: auto;
+        top: auto;
+
+        font-size: 18px;
+
+        width: 90%;
+        height: 200px;
+
+        border-radius: 0;
+        margin: 5px 5px;
+
+      }
 
     }
 
@@ -389,6 +559,10 @@
       left: 500px;
       opacity: 0;
       cursor: none;
+
+      @include mobile {
+        height: 0;
+      }
 
     }
 
@@ -416,6 +590,10 @@
       opacity: 0;
     }
 
+    @include mobile {
+      display: none;
+    }
+
   }
 
   .circles4-left {
@@ -439,6 +617,20 @@
 
     transition: all 1s linear;
 
+    @include mobile {
+      position: relative;
+      left: auto;
+      top: auto;
+
+      width: 90%;
+      height: 50px;
+
+      font-size: 18px;
+
+      border-radius: 0;
+      margin: 5px 5px;
+    }
+
     &.active {
       width: 600px;
       height: 500px;
@@ -446,8 +638,23 @@
       left: 280px;
       z-index: 2;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color
+      box-shadow: inset 0 0 2px 2px $circles-text-color;
 
+      @include mobile {
+
+        position: relative;
+        left: auto;
+        top: auto;
+
+        font-size: 18px;
+
+        width: 90%;
+        height: 200px;
+
+        border-radius: 0;
+        margin: 5px 5px;
+
+      }
     }
 
     &.inactive {
@@ -455,6 +662,10 @@
       left: 500px;
       opacity: 0;
       cursor: none;
+
+      @include mobile {
+        height: 0;
+      }
 
     }
 
@@ -482,6 +693,10 @@
       opacity: 0;
     }
 
+    @include mobile {
+      display: none;
+    }
+
   }
 
   .circles5-left {
@@ -505,6 +720,20 @@
 
     transition: all 1s linear;
 
+    @include mobile {
+      position: relative;
+      left: auto;
+      top: auto;
+
+      width: 90%;
+      height: 50px;
+
+      font-size: 18px;
+
+      border-radius: 0;
+      margin: 5px 5px;
+    }
+
     &.active {
       width: 600px;
       height: 500px;
@@ -512,7 +741,23 @@
       left: 280px;
       z-index: 2;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color
+      box-shadow: inset 0 0 2px 2px $circles-text-color;
+
+      @include mobile {
+
+        position: relative;
+        left: auto;
+        top: auto;
+
+        font-size: 18px;
+
+        width: 90%;
+        height: 200px;
+
+        border-radius: 0;
+        margin: 5px 5px;
+
+      }
 
     }
 
@@ -521,6 +766,11 @@
       left: 500px;
       opacity: 0;
       cursor: none;
+
+      @include mobile {
+        height: 0;
+      }
+
 
     }
 
@@ -548,6 +798,10 @@
       opacity: 0;
     }
 
+    @include mobile {
+      display: none;
+    }
+
   }
 }
 
@@ -563,6 +817,12 @@
   cursor: default;
 
   animation: reveal 1.3s ease-in forwards;
+
+  @include mobile {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    width: 95%;
+  }
 
   .circles-list__el {
     color: $text-color;
@@ -581,7 +841,8 @@
 .container.details{
   background: url(../assets/details-background.png) no-repeat center;
   background-size: cover;
-  min-height: 400px;
+  width: 100%;
+  max-height: 400px;
 
   margin-bottom: 30px;
 
@@ -591,8 +852,21 @@
 
   position: relative;
 
+  @include mobile {
+    height: 180px;
+    font-size: 16px;
+
+    align-items: center;
+
+    text-transform: uppercase;
+
+    margin: 0;
+  }
+
   .details-title {
     color: $text-color;
+
+
   }
 
   .details-circle1 {
@@ -608,6 +882,11 @@
     top: -40px;
     left: 200px;
     opacity: 0.8;
+
+    @include mobile {
+      display: none;
+    }
+
 
   }
 
@@ -625,6 +904,11 @@
     left: 560px;
     opacity: 0.75;
 
+    @include mobile {
+      display: none;
+    }
+
+
   }
 
   .details-circle3 {
@@ -640,6 +924,11 @@
     top: 160px;
     left: 900px;
     opacity: 0.7;
+
+    @include mobile {
+      display: none;
+    }
+
 
   }
 
@@ -657,6 +946,10 @@
     left: 320px;
     opacity: 0.65;
 
+    @include mobile {
+      display: none;
+    }
+
   }
 
 }
@@ -666,11 +959,16 @@
 
 .container.footer {
   background-color: $footer-background-color;
+  width: 100%;
   height: 100px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
 
 
 
@@ -678,6 +976,13 @@
   .footer-content {
     color: $text-color;
     font-size: 18px;
+    text-align: center;
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+
   }
 }
 
