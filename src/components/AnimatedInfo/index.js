@@ -5,6 +5,7 @@ const AnimatedInfo = () => {
 
     // const [active, setActive] = useState(false)
 
+
     const [circleData, setCircleData] = useState({
         firstActive: false,
         secondActive: false,
@@ -147,7 +148,7 @@ const AnimatedInfo = () => {
                 <div className='circles2-left' id='firstCircle2' onClick={handleCircleClick}>
                     {circleData.secondActive === false
                         ? 'Formularz rekrutacyjny'
-                        : 'Zmiana'
+                        : <a className='applicationFormLink' href="../../files/formularz.txt" download>Pobierz formularz</a>
                     }
 
                 </div>
@@ -160,7 +161,7 @@ const AnimatedInfo = () => {
                 </div>
                 <div className='circles3-right' id='secondCircle3'/>
                 <div className='circles4-left' id='firstCircle4' onClick={handleCircleClick}>
-                    {circleData.thirdActive === false
+                    {circleData.fourthActive === false
                         ? 'Opłaty'
                         : 'Zmiana'
                     }
