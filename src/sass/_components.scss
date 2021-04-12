@@ -218,8 +218,31 @@
 
   .slide-content__text {
     text-align: justify;
+    white-space: pre-line;
 
   }
+
+  .slide-content__link {
+    pointer-events: auto;
+
+    text-decoration: none;
+
+    color: $text-color;
+    font-weight: bold;
+
+    &:hover {
+      color: lighten($text-color, 25%);
+    }
+
+  }
+
+  .slide-content__link-title {
+    text-align: left;
+
+  }
+
+
+
 
 }
 
@@ -976,13 +999,32 @@
   .footer-content {
     color: $text-color;
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
+
+    width: 100%;
+
 
     @include mobile {
       font-size: 14px;
     }
+  .footer-content__left {
+    width: 33%;
+
+    }
+  .footer-content__logo {
+    max-width: 90px;
+    max-height: 90px;
+    filter: invert(60%) sepia(1%) saturate(3283%) hue-rotate(314deg) brightness(109%) contrast(102%);
 
 
+    }
+  .footer-content__right {
+    width: 33%;
+
+    }
   }
 }
 
