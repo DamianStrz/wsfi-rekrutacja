@@ -30,7 +30,8 @@ const Slider = () => {
     const handleColorChange = (e) => {
 
 
-        (e.target.id === 'box-one' && slideData.isActive === false) && setSlideData({...slideData,
+        (e.target.id === 'box-one' && slideData.isActive === false) && setSlideData({
+            ...slideData,
             isActive: !slideData.isActive,
             imgTitle: data.imgTitleBoxOne,
             title: data.titleBoxOne,
@@ -41,7 +42,8 @@ const Slider = () => {
             box: e.target.id
         });
 
-        (e.target.id === 'box-one' && slideData.isActive === true) && setSlideData({...slideData,
+        (e.target.id === 'box-one' && slideData.isActive === true) && setSlideData({
+            ...slideData,
             imgTitle: data.imgTitleBoxOne,
             title: data.titleBoxOne,
             text: data.textBoxOne,
@@ -52,7 +54,8 @@ const Slider = () => {
         });
 
 
-        (e.target.id === 'box-two' && slideData.isActive === false) && setSlideData({...slideData,
+        (e.target.id === 'box-two' && slideData.isActive === false) && setSlideData({
+            ...slideData,
             isActive: !slideData.isActive,
             imgTitle: data.imgTitleBoxTwo,
             title: data.titleBoxTwo,
@@ -63,7 +66,8 @@ const Slider = () => {
             box: e.target.id
         });
 
-        (e.target.id === 'box-two' && slideData.isActive === true) && setSlideData({...slideData,
+        (e.target.id === 'box-two' && slideData.isActive === true) && setSlideData({
+            ...slideData,
             imgTitle: data.imgTitleBoxTwo,
             title: data.titleBoxTwo,
             text: data.textBoxTwo,
@@ -73,7 +77,8 @@ const Slider = () => {
             box: e.target.id
         });
 
-        (e.target.id === 'box-three' && slideData.isActive === false) && setSlideData({...slideData,
+        (e.target.id === 'box-three' && slideData.isActive === false) && setSlideData({
+            ...slideData,
             isActive: !slideData.isActive,
             imgTitle: data.imgTitleBoxThree,
             title: data.titleBoxThree,
@@ -84,7 +89,8 @@ const Slider = () => {
             box: e.target.id
         });
 
-        (e.target.id === 'box-three' && slideData.isActive === true) && setSlideData({...slideData,
+        (e.target.id === 'box-three' && slideData.isActive === true) && setSlideData({
+            ...slideData,
             imgTitle: data.imgTitleBoxThree,
             title: data.titleBoxThree,
             text: data.textBoxThree,
@@ -94,17 +100,13 @@ const Slider = () => {
             box: e.target.id
         });
 
-        e.target.id === 'slide' && setSlideData({...slideData,isActive: !slideData.isActive,});
+        e.target.id === 'slide' && setSlideData({...slideData, isActive: !slideData.isActive,});
 
 
         e.stopPropagation();
 
 
-
     }
-
-
-
 
     return(
 

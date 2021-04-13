@@ -1,26 +1,63 @@
+//font
+
+@font-face {
+  font-family: 'antoniobold';
+  src: url('../assets/font-antonio/antonio-bold-webfont.woff2') format('woff2'),
+  url('../assets/font-antonio/antonio-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'antonioregular';
+  src: url('../assets/font-antonio/antonio-regular-webfont.woff2') format('woff2'),
+  url('../assets/font-antonio/antonio-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'antoniolight';
+  src: url('../assets/font-antonio/antonio-light-webfont.woff2') format('woff2'),
+  url('../assets/font-antonio/antonio-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
 // variables
+
+$font: 'antonioregular', serif;
 
 $text-color: #514545;
 
-$sliderbox-text-color: #FFFFFF;
-$slider-background-color: #F6F0D9;
+$hero-title-color:#B59629;
 
-$footer-background-color: #E4DD9E;
+$sliderbox-text-color: #FFFFFF;
+$slider-background-color: #F8E5A2;
+
+
 
 $circles-text-color: #FFFFFF;
-$circle1-background-color: #C3A66C;
-$circle2-background-color: #DCCC92;
-$circle3-background-color: #DCCC92;
-$circle4-background-color: #BDB45D;
-$circle5-background-color: #BDB45D;
+$circle1-background-color: #E0A22A;
+$circle2-background-color: #B59629;
+$circle3-background-color: #F8E5A2;
+$circle4-background-color: #E3D233;
+$circle5-background-color: #F3E13C;
 
 $circle-background-color: #F0E6E6;
 
-
+$details-title-color: #B59629;
 $details-circle1-color: #DFF3D2;
 $details-circle2-color: #EFF0E6;
 $details-circle3-color: #F0EDE6;
 $details-circle4-color: #E8F0E6;
+
+$footer-background-color: #E3D233;
 
 //breakpoints
 

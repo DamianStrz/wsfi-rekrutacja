@@ -2,6 +2,10 @@
 @import "base";
 @import "components";
 
+* {
+  font-family: $font;
+}
+
 header, main {
   display: flex;
   flex-direction: column;
