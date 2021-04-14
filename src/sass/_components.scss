@@ -298,6 +298,7 @@
   height: 650px;
   width: 100%;
 
+
   @include mobile {
     height: auto;
     margin: 10px 0;
@@ -317,6 +318,9 @@
   text-align: center;
   width: 100%;
   height: 545px;
+  position: relative;
+
+
 
   @include mobile {
     display: flex;
@@ -350,6 +354,7 @@
 
     transition: all 0.8s linear;
 
+
     @include mobile {
       position: relative;
       left: auto;
@@ -368,7 +373,7 @@
       width: 600px;
       height: 500px;
       top: -20px;
-      left: 250px;
+      left: 265px;
       z-index: 2;
 
       display: flex;
@@ -378,6 +383,8 @@
       padding-top: 20px;
 
       box-shadow: inset 0 0 2px 2px $circles-text-color;
+
+
 
       @include mobile {
 
@@ -398,10 +405,11 @@
     }
 
     &.inactive {
-      top: 0;
-      left: 500px;
+      top: -80px;
+      left: 890px;
       opacity: 0;
       cursor: none;
+
 
       @include mobile {
         height: 0;
@@ -433,6 +441,7 @@
       top: -100px;
       left: 640px;
       opacity: 0;
+
     }
 
     @include mobile {
@@ -482,7 +491,7 @@
       width: 600px;
       height: 500px;
       top: -380px;
-      left: 280px;
+      left: 265px;
       z-index: 2;
 
       box-shadow: inset 0 0 2px 2px $circles-text-color;
@@ -507,7 +516,7 @@
 
     &.inactive {
       top: -400px;
-      left: 500px;
+      left: 265px;
       opacity: 0;
       cursor: none;
 
@@ -598,7 +607,7 @@
       width: 600px;
       height: 500px;
       top: -640px;
-      left: 280px;
+      left: 265px;
       z-index: 2;
 
       box-shadow: inset 0 0 2px 2px $circles-text-color;
@@ -702,7 +711,7 @@
       width: 600px;
       height: 500px;
       top: -950px;
-      left: 280px;
+      left: 265px;
       z-index: 2;
 
       box-shadow: inset 0 0 2px 2px $circles-text-color;
@@ -805,7 +814,7 @@
       width: 600px;
       height: 500px;
       top: -1200px;
-      left: 280px;
+      left: 265px;
       z-index: 2;
 
       box-shadow: inset 0 0 2px 2px $circles-text-color;
