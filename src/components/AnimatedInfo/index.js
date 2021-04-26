@@ -33,17 +33,30 @@ const AnimatedInfo = () => {
 
         } else if (e.target.id === 'firstCircle2') {
             e.target.classList.toggle('active');
+            e.target.classList.remove('inactive');
+
 
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
             rightCircles.forEach((el => el.classList.toggle('inactive')));
+
+            document.getElementById('firstCircle1').classList.remove('active');
+            document.getElementById('firstCircle3').classList.remove('active');
+            document.getElementById('firstCircle4').classList.remove('active');
+            document.getElementById('firstCircle5').classList.remove('active');
 
             document.getElementById('firstCircle1').classList.toggle('inactive');
             document.getElementById('firstCircle3').classList.toggle('inactive');
             document.getElementById('firstCircle4').classList.toggle('inactive');
             document.getElementById('firstCircle5').classList.toggle('inactive');
 
-            setCircleData({...circleData, secondActive: !circleData.secondActive});
+            setCircleData({...circleData,
+                firstActive: false,
+                secondActive: !circleData.secondActive,
+                thirdActive: false,
+                fourthActive: false,
+                fifthActive: false
+            });
 
         } else if (e.target.id === 'firstCircle3') {
             e.target.classList.toggle('active');
