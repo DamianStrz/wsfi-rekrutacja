@@ -1,7 +1,7 @@
 import React from "react";
 
-import heroBackground from '../../assets/hero-background-nologo.png'
-import linkBackground from '../../assets/logo-wsfi-białe-bez-tła.png'
+import heroBackground from '../../assets/hero-background-nologo-short.png'
+import linkBackground from '../../assets/logo-wsfi-braz-bez-tła.png'
 
 const Hero = () => (
     <div className='container hero'>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../assets/logo-wsfi-białe-bez-tła.png'
+import logo from '../../assets/logo-wsfi-braz-bez-tła.png'
 
 const Footer = () => {
 

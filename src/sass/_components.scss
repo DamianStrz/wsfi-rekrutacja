@@ -24,12 +24,11 @@
 
   position: absolute;
   right: 0;
-  bottom: 250px;
+  bottom: 215px;
 
   .hero-link__background {
     width: 180px;
     height: 180px;
-    filter: invert(60%) sepia(1%) saturate(3283%) hue-rotate(314deg) brightness(109%) contrast(102%);
   }
 }
 
@@ -1070,8 +1069,6 @@
   .footer-content__logo {
     max-width: 90px;
     max-height: 90px;
-    filter: invert(60%) sepia(1%) saturate(3283%) hue-rotate(314deg) brightness(109%) contrast(102%);
-
 
     }
   .footer-content__right {
