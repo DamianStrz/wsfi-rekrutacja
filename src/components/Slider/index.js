@@ -133,7 +133,7 @@ const SlideContent = ({slideData,onClick}) => {
     return(
         <div className='slide' onClick={onClick}>
             <div className='slide-content' id='slide' >
-                <div className={`slide-content__img ${slideData.box}`} >{slideData.imgTitle}</div>
+                {/*<div className={`slide-content__img ${slideData.box}`} >{slideData.imgTitle}</div>*/}
                 <div>
                     <h3 className='slide-content__title'>{slideData.title}</h3>
                     <p className='slide-content__text'>{slideData.text}</p>

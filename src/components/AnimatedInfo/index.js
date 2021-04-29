@@ -11,7 +11,7 @@ const AnimatedInfo = () => {
         secondActive: false,
         thirdActive: false,
         fourthActive: false,
-        fifthActive: false
+        fifthActive: false,
     })
 
 
@@ -26,11 +26,24 @@ const AnimatedInfo = () => {
 
         if (e.target.id === 'firstCircle1') {
             e.target.classList.toggle('active');
-            e.target.classList.remove('inactive');
+            firstCircle1.classList.contains('inactive2') &&
+                firstCircle1.classList.remove('inactive2');
+
+            firstCircle1.classList.contains('inactive3') &&
+                firstCircle1.classList.remove('inactive3');
+
+            firstCircle1.classList.contains('inactive4') &&
+                firstCircle1.classList.remove('inactive4');
+
+            firstCircle1.classList.contains('inactive5') &&
+                firstCircle1.classList.remove('inactive5');
+
+
+
 
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
-            rightCircles.forEach((el => el.classList.toggle('inactive')));
+            rightCircles.forEach((el => el.classList.remove('inactive')));
 
             document.getElementById('firstCircle2').classList.remove('active');
             document.getElementById('firstCircle3').classList.remove('active');
@@ -48,9 +61,18 @@ const AnimatedInfo = () => {
                 document.getElementById('firstCircle3').classList.add('inactive');
                 document.getElementById('firstCircle4').classList.add('inactive');
                 document.getElementById('firstCircle5').classList.add('inactive');
+
+                rightCircles.forEach((el => el.classList.add('inactive')));
             }
 
-            setCircleData({...circleData, firstActive: !circleData.firstActive});
+            setCircleData({...circleData,
+                firstActive: !circleData.firstActive,
+                secondActive: false,
+                thirdActive: false,
+                fourthActive: false,
+                fifthActive: false,
+
+            });
 
         } else if (e.target.id === 'firstCircle2') {
             e.target.classList.toggle('active');
@@ -59,24 +81,31 @@ const AnimatedInfo = () => {
 
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
-            rightCircles.forEach((el => el.classList.toggle('inactive')));
+            rightCircles.forEach((el => el.classList.remove('inactive')));
 
             document.getElementById('firstCircle1').classList.remove('active');
             document.getElementById('firstCircle3').classList.remove('active');
             document.getElementById('firstCircle4').classList.remove('active');
             document.getElementById('firstCircle5').classList.remove('active');
 
-            document.getElementById('firstCircle1').classList.remove('inactive');
+            document.getElementById('firstCircle1').classList.remove('inactive2');
+            document.getElementById('firstCircle1').classList.remove('inactive3');
+            document.getElementById('firstCircle1').classList.remove('inactive4');
+            document.getElementById('firstCircle1').classList.remove('inactive5');
+
+
             document.getElementById('firstCircle3').classList.remove('inactive');
             document.getElementById('firstCircle4').classList.remove('inactive');
             document.getElementById('firstCircle5').classList.remove('inactive');
 
             if (e.target.classList.contains('active')) {
 
-                document.getElementById('firstCircle1').classList.add('inactive');
+                document.getElementById('firstCircle1').classList.add('inactive2');
                 document.getElementById('firstCircle3').classList.add('inactive');
                 document.getElementById('firstCircle4').classList.add('inactive');
                 document.getElementById('firstCircle5').classList.add('inactive');
+
+                rightCircles.forEach((el => el.classList.add('inactive')));
             }
 
             setCircleData({...circleData,
@@ -93,24 +122,32 @@ const AnimatedInfo = () => {
 
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
-            rightCircles.forEach((el => el.classList.toggle('inactive')));
+            rightCircles.forEach((el => el.classList.remove('inactive')));
 
             document.getElementById('firstCircle1').classList.remove('active');
             document.getElementById('firstCircle2').classList.remove('active');
             document.getElementById('firstCircle4').classList.remove('active');
             document.getElementById('firstCircle5').classList.remove('active');
 
-            document.getElementById('firstCircle1').classList.remove('inactive');
+            document.getElementById('firstCircle1').classList.remove('inactive3');
+            document.getElementById('firstCircle1').classList.remove('inactive4');
+            document.getElementById('firstCircle1').classList.remove('inactive5');
+            document.getElementById('firstCircle1').classList.remove('inactive2');
+
+
             document.getElementById('firstCircle2').classList.remove('inactive');
             document.getElementById('firstCircle4').classList.remove('inactive');
             document.getElementById('firstCircle5').classList.remove('inactive');
 
             if (e.target.classList.contains('active')) {
 
-                document.getElementById('firstCircle1').classList.add('inactive');
+                document.getElementById('firstCircle1').classList.add('inactive3');
                 document.getElementById('firstCircle2').classList.add('inactive');
                 document.getElementById('firstCircle4').classList.add('inactive');
                 document.getElementById('firstCircle5').classList.add('inactive');
+
+                rightCircles.forEach((el => el.classList.add('inactive')));
+
             }
 
             setCircleData({...circleData,
@@ -127,24 +164,33 @@ const AnimatedInfo = () => {
 
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
-            rightCircles.forEach((el => el.classList.toggle('inactive')));
+            rightCircles.forEach((el => el.classList.remove('inactive')));
 
             document.getElementById('firstCircle1').classList.remove('active');
             document.getElementById('firstCircle2').classList.remove('active');
             document.getElementById('firstCircle3').classList.remove('active');
             document.getElementById('firstCircle5').classList.remove('active');
 
-            document.getElementById('firstCircle1').classList.remove('inactive');
+            document.getElementById('firstCircle1').classList.remove('inactive4');
+            document.getElementById('firstCircle1').classList.remove('inactive5');
+            document.getElementById('firstCircle1').classList.remove('inactive2');
+            document.getElementById('firstCircle1').classList.remove('inactive3');
+
+
+
             document.getElementById('firstCircle2').classList.remove('inactive');
             document.getElementById('firstCircle3').classList.remove('inactive');
             document.getElementById('firstCircle5').classList.remove('inactive');
 
             if (e.target.classList.contains('active')) {
 
-                document.getElementById('firstCircle1').classList.add('inactive');
+                document.getElementById('firstCircle1').classList.add('inactive4');
                 document.getElementById('firstCircle2').classList.add('inactive');
                 document.getElementById('firstCircle3').classList.add('inactive');
                 document.getElementById('firstCircle5').classList.add('inactive');
+
+
+                rightCircles.forEach((el => el.classList.add('inactive')));
             }
 
             setCircleData({...circleData,
@@ -162,24 +208,32 @@ const AnimatedInfo = () => {
 
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
-            rightCircles.forEach((el => el.classList.toggle('inactive')));
+            rightCircles.forEach((el => el.classList.remove('inactive')));
 
             document.getElementById('firstCircle1').classList.remove('active');
             document.getElementById('firstCircle2').classList.remove('active');
             document.getElementById('firstCircle3').classList.remove('active');
             document.getElementById('firstCircle4').classList.remove('active');
 
-            document.getElementById('firstCircle1').classList.remove('inactive');
+            document.getElementById('firstCircle1').classList.remove('inactive5');
+            document.getElementById('firstCircle1').classList.remove('inactive2');
+            document.getElementById('firstCircle1').classList.remove('inactive3');
+            document.getElementById('firstCircle1').classList.remove('inactive4');
+
+
+
             document.getElementById('firstCircle2').classList.remove('inactive');
             document.getElementById('firstCircle3').classList.remove('inactive');
             document.getElementById('firstCircle4').classList.remove('inactive');
 
             if (e.target.classList.contains('active')) {
 
-                document.getElementById('firstCircle1').classList.add('inactive');
+                document.getElementById('firstCircle1').classList.add('inactive5');
                 document.getElementById('firstCircle2').classList.add('inactive');
                 document.getElementById('firstCircle3').classList.add('inactive');
                 document.getElementById('firstCircle4').classList.add('inactive');
+
+                rightCircles.forEach((el => el.classList.add('inactive')));
             }
 
             setCircleData({...circleData,
