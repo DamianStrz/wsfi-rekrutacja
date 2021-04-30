@@ -286,8 +286,8 @@ const AnimatedInfo = () => {
                         ? 'Wymagane dokumenty'
                         : <ul className='circles-list' onClick={handleListClick}>
                             <li className='circles-list__el' onClick={handleListClick}>świadectwo dojrzałości,</li>
-                            <li className='circles-list__el' onClick={handleListClick}>przesłanie formularza Rekrutacji on-line lub podania na druku Uczelni z deklaracją specjalności [pobierz],</li>
-                            <li className='circles-list__el' onClick={handleListClick}>2 fotografie o wymiarach 35x45 mm (jedna elektroniczna, format jpg)</li>
+                            <li className='circles-list__el' onClick={handleListClick}>przesłanie formularza Rekrutacji on-line [przejdź],</li>
+                            <li className='circles-list__el' onClick={handleListClick}>2 fotografie (35x45 mm, jedna elektroniczna, format jpg)</li>
                             <li className='circles-list__el' onClick={handleListClick}>dowód osobisty (do wglądu),</li>
                             <li className='circles-list__el' onClick={handleListClick}>kserokopia wniesienia opłaty rekrutacyjnej.</li>
                         </ul>

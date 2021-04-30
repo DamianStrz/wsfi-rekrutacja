@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import linkBackground from "../../assets/logo-wsfi-braz-bez-tła.png";
 
 const Footer = () => {
+
+    const [rodo, setRodo] = useState('https://www.wsfi.edu.pl/files/obowiazek_informacyjny_studia.pdf')
+
 
     return (
         <footer className='container footer'>
@@ -13,6 +16,8 @@ const Footer = () => {
                 </a>
                 <p className='footer-content__right'> e-mail: dziekanat@wsfi.pl</p>
             </div>
+            <a className='footer-rodo' href={rodo} target='_blank' rel='noopener noreferrer'>
+                Zapoznaj się z informacjami dotyczącymi danych osobowych kandydatów na studia</a>
         </footer>
     )
 }
