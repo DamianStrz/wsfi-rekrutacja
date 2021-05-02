@@ -38,9 +38,6 @@ const AnimatedInfo = () => {
             firstCircle1.classList.contains('inactive5') &&
                 firstCircle1.classList.remove('inactive5');
 
-
-
-
             const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
 
             rightCircles.forEach((el => el.classList.remove('inactive')));
@@ -93,10 +90,6 @@ const AnimatedInfo = () => {
             document.getElementById('firstCircle1').classList.remove('inactive4');
             document.getElementById('firstCircle1').classList.remove('inactive5');
 
-
-            document.getElementById('firstCircle3').classList.remove('inactive');
-            document.getElementById('firstCircle4').classList.remove('inactive');
-            document.getElementById('firstCircle5').classList.remove('inactive');
 
             if (e.target.classList.contains('active')) {
 

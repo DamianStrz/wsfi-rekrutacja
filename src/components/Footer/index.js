@@ -10,11 +10,32 @@ const Footer = () => {
     return (
         <footer className='container footer'>
             <div className='footer-content'>
-                <p className='footer-content__left'>tel.: 42 639 91 10, 501 24 87 81</p>
+                <address className='footer-content__left'>
+                    <a className='footer-content__facebook'
+                       href='https://www.facebook.com/WSFI.Lodz'
+                       target='_blank' rel='noopener noreferrer'>
+                        <i className="fa fa-facebook-square"></i>
+                    </a>
+                    &nbsp;Wyższa Szkoła Finansów i Informatyki w Łodzi<br/>
+                    ul. Wróblewskiego 18, 93-578 Łódź <br/>
+                    tel.: 42 639 91 10, 501-016-524 <br/>
+                    e-mail: dziekanat@wsfi.pl
+                </address>
                 <a href='https://www.wsfi.edu.pl/' target='_blank' rel='noopener noreferrer'>
                     <img className='footer-content__logo' src={linkBackground} alt="link"/>
                 </a>
-                <p className='footer-content__right'> e-mail: dziekanat@wsfi.pl</p>
+                <address className='footer-content__right'>
+                    <a className='footer-content__facebook'
+                       href='https://www.facebook.com/WSFI.Kalisz'
+                       target='_blank' rel='noopener noreferrer'>
+                        <i className="fa fa-facebook-square"></i>
+                    </a>
+                    &nbsp;Wydział Ekonomii w Kaliszu <br/>
+                    ul. Widok 96A, 62-800 Kalisz <br/>
+                    tel.: 62 753 56 53, 501-016-524 <br/>
+                    e-mail: kalisz@wsfi.pl
+
+                </address>
             </div>
             <a className='footer-rodo' href={rodo} target='_blank' rel='noopener noreferrer'>
                 Zapoznaj się z informacjami dotyczącymi danych osobowych kandydatów na studia</a>

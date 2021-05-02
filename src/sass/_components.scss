@@ -576,6 +576,55 @@
 
     }
 
+    &.inactive2 {
+      left: 900px;
+      top: 0;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive3 {
+      left: 900px;
+      top: 300px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+
+    &.inactive4 {
+      top: 300px;
+      left: 60px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive5 {
+      top: 10px;
+      left: 50px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
     .applicationFormLink {
 
       text-decoration: none;
@@ -693,6 +742,55 @@
 
     }
 
+    &.inactive2 {
+      left: 900px;
+      top: 0;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive3 {
+      left: 900px;
+      top: 300px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+
+    &.inactive4 {
+      top: 300px;
+      left: 60px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive5 {
+      top: 10px;
+      left: 50px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
   }
 
   .circles3-right {
@@ -794,6 +892,54 @@
         height: 0;
       }
 
+    }
+    &.inactive2 {
+      left: 900px;
+      top: 0;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive3 {
+      left: 900px;
+      top: 300px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+
+    &.inactive4 {
+      top: 300px;
+      left: 60px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive5 {
+      top: 10px;
+      left: 50px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
     }
 
   }
@@ -898,6 +1044,55 @@
         height: 0;
       }
 
+    }
+
+    &.inactive2 {
+      left: 900px;
+      top: 0;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive3 {
+      left: 900px;
+      top: 300px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+
+    &.inactive4 {
+      top: 300px;
+      left: 60px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
+    }
+
+    &.inactive5 {
+      top: 10px;
+      left: 50px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+
+      @include mobile {
+        height: 0;
+      }
     }
   }
 
@@ -1113,7 +1308,7 @@
 
   .footer-content {
     color: $text-color;
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1127,6 +1322,7 @@
     }
   .footer-content__left {
     width: 33%;
+    font-style: normal;
 
     }
   .footer-content__logo {
@@ -1136,8 +1332,21 @@
     }
   .footer-content__right {
     width: 33%;
+    font-style: normal;
 
     }
+  .footer-content__facebook {
+    > i {
+      text-decoration: none;
+      color: $text-color;
+      font-size: 18px;
+
+    }
+  }
+
+
+
+
   }
 }
 
