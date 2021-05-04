@@ -1,6 +1,6 @@
 import React from "react";
 
-import heroBackground from '../../assets/studiuj-online-background.png'
+import heroBackground from '../../assets/hero-background-smaller.png'
 import linkBackground from '../../assets/logo-wsfi-braz-bez-tła.png'
 
 console.log(document.querySelector('.hero-link'));
@@ -16,8 +16,15 @@ const Hero = () => (
         {/*<div className='hero-background'/>*/}
         <div className='hero-info'>
             <h1 className='hero-title'>Wyższa Szkoła Finansów i Informatyki - studia online</h1>
-            <p>kształci studentów od 1997 roku. Ma bogate, wieloletnie doświadczenie w nauczaniu na kierunkach ekonomicznych. Mury uczelni opuściło prawie 4 tys. absolwentów. Ich losy potwierdzają dobre ich przygotowanie do zawodów i działań w biznesie.</p>
-            <p>Naszą misją jest przekazywanie wiedzy i praktycznych umiejętności, w przyjaznym środowisku, apewniających absolwentom osiąsiąganie sukcesów wzmacniających prestiż Uczelni. Kształtujemy odpowiedialnych, kompetentnych profesjonalistów, pewnie wkraczających na rynejk pracy.</p>
+            <ul>E - learning to przyszłość na jaka zasługujesz! Przekonaj się już dziś, że to:
+                <li>oszczędność czasu, nie musisz już stać w korkach w drodze na uczelnie</li>
+                <li>nie musisz stać w kolejce do dziekanatu czy na konsultacje, wszystkie
+                    formalności możesz załatwiać za pomocą czatów, poczty oraz komunikatorów
+                    platform do e-learningu</li>
+                <li>sam decydujesz o tempie, czasie i miejscu nauki</li>
+                <li>poznasz nowe formy szybszej i efektywniejszej nauki, dzięki
+                    innowacyjnemu podejściu do prezentowanych treści</li>
+            </ul>
         </div>
     </div>
 )

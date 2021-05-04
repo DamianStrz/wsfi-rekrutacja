@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 
-
 const AnimatedInfo = () => {
+
 
     // const [active, setActive] = useState(false)
 
+    const recruitmentForm = 'https://dziekanat.wsfi.pl/formularz-rekrutacyjny'
 
     const [circleData, setCircleData] = useState({
         firstActive: false,
@@ -277,20 +278,32 @@ const AnimatedInfo = () => {
                 <div className='circles1-left' id='firstCircle1' onClick={handleCircleClick}>
                     {circleData.firstActive === false
                         ? 'Wymagane dokumenty'
-                        : <ul className='circles-list' onClick={handleListClick}>
-                            <li className='circles-list__el' onClick={handleListClick}>świadectwo dojrzałości,</li>
-                            <li className='circles-list__el' onClick={handleListClick}>przesłanie formularza Rekrutacji on-line [przejdź],</li>
-                            <li className='circles-list__el' onClick={handleListClick}>2 fotografie (35x45 mm, jedna elektroniczna, format jpg)</li>
-                            <li className='circles-list__el' onClick={handleListClick}>dowód osobisty (do wglądu),</li>
-                            <li className='circles-list__el' onClick={handleListClick}>kserokopia wniesienia opłaty rekrutacyjnej.</li>
-                        </ul>
+                        : <>
+                            <ul className='circles-list' onClick={handleListClick}>
+                                <li className='circles-list__el' onClick={handleListClick}>Świadectwo dojrzałości,</li>
+                                <li className='circles-list__el' onClick={handleListClick}>Przesłanie formularza Rekrutacji on-line [przejdź],</li>
+                                <li className='circles-list__el' onClick={handleListClick}>2 fotografie (35x45 mm, jedna elektroniczna, format jpg)</li>
+                                <li className='circles-list__el' onClick={handleListClick}>Dowód osobisty (do wglądu),</li>
+                                <li className='circles-list__el' onClick={handleListClick}>Kserokopia wniesienia opłaty rekrutacyjnej.</li>
+                            </ul>
+                            <h3>Dokumenty należy składać osobiście lub przesłać listem poleconym:</h3>
+                            <p>ŁÓDŹ, 93-587 ul. Wróblewskiego 18/801 (8 piętro, "Urbanica"), tel: 42
+639 91 10, 501 016 524, e-mail: dziekanat@wsfi.pl</p>
+                            <p>KALISZ, 62-800 ul. Widok 96a (budynek IV LO), tel: 62 753 56 53, 501
+016 529, e-mail: kalisz@wsfi.pl</p>
+                            <p>Można także przesłać skan podpisanych dokumentów (oryginały należy dostarczyć osobiście lub listem poleconym w terminie
+14 dni).</p>
+                            </>
                     }
                 </div>
                 <div className='circles1-right' id='secondCircle1'/>
                 <div className='circles2-left' id='firstCircle2' onClick={handleCircleClick}>
                     {circleData.secondActive === false
                         ? 'Formularz rekrutacyjny'
-                        : <a className='applicationFormLink' href="../../files/formularz.txt" download>Pobierz formularz</a>
+                        : <a className='applicationFormLink'
+                             href={recruitmentForm}
+                             target='_blank'
+                             rel='noopener noreferrer'>Przejdź do formularza rekrutacji online</a>
                     }
 
                 </div>
@@ -298,14 +311,14 @@ const AnimatedInfo = () => {
                 <div className='circles3-left' id='firstCircle3' onClick={handleCircleClick}>
                     {circleData.thirdActive === false
                         ? 'Terminy'
-                        : 'Zmiana'
+                        : 'Rekrutacja rusza od 1 czerwca 2021r.'
                     }
                 </div>
                 <div className='circles3-right' id='secondCircle3'/>
                 <div className='circles4-left' id='firstCircle4' onClick={handleCircleClick}>
                     {circleData.fourthActive === false
                         ? 'Opłaty'
-                        : 'Zmiana'
+                        : <Fee/>
                     }
                 </div>
                 <div className='circles4-right' id='secondCircle4'/>
@@ -323,9 +336,45 @@ const AnimatedInfo = () => {
     )
 }
 
-const Test = () => <p>Dupa</p>
+const Fee = () => {
+
+    return(
+        <div>
+            <h2>KOSZTY REKRUTACJI:</h2>
+            <p>85zł - opłata rekrutacyjna</p>
+            <p>350zł - wpisowe</p>
+            <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): 80 1020 3352 0000 1102 0010 5684</p>
+            <thead>
+                <tr>
+                    <td>Rekrutacja 2021/22</td>
+                    <td>Czesne (studia tradycyjne)</td>
+                    <td>Czesne (studia online)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I rok studiów</td>
+                    <td>350 zł miesięcznie (płatne 12 miesięcy)</td>
+                    <td>350 zł miesięcznie (płatne 12 miesięcy)</td>
+                </tr>
+                <tr>
+                    <td>I rok studiów</td>
+                    <td>375 zł miesięcznie (płatne 12 miesięcy)</td>
+                    <td>385 zł miesięcznie (płatne 12 miesięcy)</td>
+                </tr>
+                <tr>
+                    <td>I rok studiów</td>
+                    <td>450 zł miesięcznie (płatne 10 miesięcy)</td>
+                    <td>475 zł miesięcznie (płatne 10 miesięcy)</td>
+                </tr>
+            </tbody>
+
+        </div>
+
+    )
+}
+
+
 
 
 export default AnimatedInfo;
-
-export { Test }

@@ -17,7 +17,7 @@ const Footer = () => {
                         <i className="fa fa-facebook-square"></i>
                     </a>
                     &nbsp;Wyższa Szkoła Finansów i Informatyki w Łodzi<br/>
-                    ul. Wróblewskiego 18, 93-578 Łódź <br/>
+                    ul. Wróblewskiego 18/801, 93-578 Łódź <br/>
                     tel.: 42 639 91 10, 501-016-524 <br/>
                     e-mail: dziekanat@wsfi.pl
                 </address>
@@ -32,7 +32,7 @@ const Footer = () => {
                     </a>
                     &nbsp;Wydział Ekonomii w Kaliszu <br/>
                     ul. Widok 96A, 62-800 Kalisz <br/>
-                    tel.: 62 753 56 53, 501-016-524 <br/>
+                    tel.: 62 753 56 53, 501-016-529 <br/>
                     e-mail: kalisz@wsfi.pl
 
                 </address>

@@ -6,11 +6,19 @@
   font-family: $font;
 }
 
+body {
+  background-color: $body-background;
+  display: flex;
+  justify-content: center;
+}
+
 header, main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1140px;
+  box-shadow: darken($body-background, 50%) 0 5px 15px;
 }
 
 footer {
