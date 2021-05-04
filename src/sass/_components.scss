@@ -313,7 +313,7 @@
   height: 650px;
   width: 100%;
   background-color: $container-background-color;
-  z-index: -2;
+
 
 
 
@@ -367,7 +367,7 @@
     position: absolute;
     top: 20px;
     left: 590px;
-    z-index: 1;
+    z-index: 2;
 
     transition: all 0.8s linear;
 
@@ -486,7 +486,7 @@
     position: absolute;
     top: 50px;
     left: 790px;
-    z-index: -1;
+    z-index: 1;
 
     transition: all 1s linear;
 
@@ -522,6 +522,7 @@
     position: absolute;
     top: 230px;
     left: 900px;
+    z-index: 2;
 
     transition: all 1s linear;
 
@@ -654,7 +655,7 @@
     position: absolute;
     top: 260px;
     left: 1000px;
-    z-index: -1;
+    z-index: 1;
 
     transition: all 1s linear;
 
@@ -688,6 +689,7 @@
     position: absolute;
     top: 260px;
     left: 380px;
+    z-index: 2;
 
     transition: all 1s linear;
 
@@ -808,7 +810,7 @@
     position: absolute;
     top: 260px;
     left: 300px;
-    z-index: -1;
+    z-index: 1;
 
     transition: all 1s linear;
 
@@ -841,6 +843,7 @@
     position: absolute;
     top: 200px;
     left: 70px;
+    z-index: 2;
 
     transition: all 1s linear;
 
@@ -959,7 +962,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    z-index: -1;
+    z-index: 1;
 
     transition: all 1s linear;
 
@@ -992,6 +995,7 @@
     position: absolute;
     top: 0;
     left: 270px;
+    z-index: 2;
 
     transition: all 1s linear;
 
@@ -1111,7 +1115,7 @@
     position: absolute;
     top: 360px;
     left: 700px;
-    z-index: -1;
+    z-index: 1;
 
     transition: all 1s linear;
 

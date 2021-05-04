@@ -3,9 +3,6 @@ import React from "react";
 import heroBackground from '../../assets/hero-background-smaller.png'
 import linkBackground from '../../assets/logo-wsfi-braz-bez-tła.png'
 
-console.log(document.querySelector('.hero-link'));
-
-
 const Hero = () => (
 
     <div className='container hero'>
