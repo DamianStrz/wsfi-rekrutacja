@@ -278,7 +278,7 @@ const AnimatedInfo = () => {
                 <div className='circles1-left' id='firstCircle1' onClick={handleCircleClick}>
                     {circleData.firstActive === false
                         ? 'Wymagane dokumenty'
-                        : <>
+                        : <div className='circles-text'>
                             <ul className='circles-list' onClick={handleListClick}>
                                 <li className='circles-list__el' onClick={handleListClick}>Świadectwo dojrzałości,</li>
                                 <li className='circles-list__el' onClick={handleListClick}>Przesłanie formularza Rekrutacji on-line [przejdź],</li>
@@ -293,7 +293,7 @@ const AnimatedInfo = () => {
 016 529, e-mail: kalisz@wsfi.pl</p>
                             <p>Można także przesłać skan podpisanych dokumentów (oryginały należy dostarczyć osobiście lub listem poleconym w terminie
 14 dni).</p>
-                            </>
+                            </div>
                     }
                 </div>
                 <div className='circles1-right' id='secondCircle1'/>
@@ -311,7 +311,7 @@ const AnimatedInfo = () => {
                 <div className='circles3-left' id='firstCircle3' onClick={handleCircleClick}>
                     {circleData.thirdActive === false
                         ? 'Terminy'
-                        : 'Rekrutacja rusza od 1 czerwca 2021r.'
+                        : <p className='circle-calendar'>Rekrutacja rusza od 1 czerwca 2021r.</p>
                     }
                 </div>
                 <div className='circles3-right' id='secondCircle3'/>
@@ -325,7 +325,7 @@ const AnimatedInfo = () => {
                 <div className='circles5-left' id='firstCircle5' onClick={handleCircleClick}>
                     {circleData.fifthActive === false
                         ? 'Zasady'
-                        : 'Zmiana'
+                        : <p className='circles-five'>Zmiana</p>
                     }
                 </div>
                 <div className='circles5-right' id='secondCircle5'/>
@@ -339,37 +339,38 @@ const AnimatedInfo = () => {
 const Fee = () => {
 
     return(
-        <div>
-            <h2>KOSZTY REKRUTACJI:</h2>
-            <p>85zł - opłata rekrutacyjna</p>
-            <p>350zł - wpisowe</p>
-            <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): 80 1020 3352 0000 1102 0010 5684</p>
-            <thead>
-                <tr>
-                    <td>Rekrutacja 2021/22</td>
-                    <td>Czesne (studia tradycyjne)</td>
-                    <td>Czesne (studia online)</td>
+        <>
+            <div className='circles-fees'>
+                <h2>KOSZTY REKRUTACJI:</h2>
+                <p>85zł - opłata rekrutacyjna</p>
+                <p>350zł - wpisowe</p>
+                <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): 80 1020 3352 0000 1102 0010 5684</p>
+            </div>
+            <table className='circles-table'>
+                <thead className='circles-table__header'>
+                <tr className='circles-table__header--row'>
+                    <th className='circles-table__header--col1'>Rekrutacja 2021/22</th>
+                    <th className='circles-table__header--col2'>Czesne (studia online)</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>I rok studiów</td>
-                    <td>350 zł miesięcznie (płatne 12 miesięcy)</td>
-                    <td>350 zł miesięcznie (płatne 12 miesięcy)</td>
+                </thead>
+                <tbody>
+                <tr className='circles-table__header--row'>
+                    <td className='circles-table__header--col1'>I rok studiów</td>
+                    <td className='circles-table__header--col2'>350 zł miesięcznie (płatne 12 miesięcy)</td>
                 </tr>
-                <tr>
-                    <td>I rok studiów</td>
-                    <td>375 zł miesięcznie (płatne 12 miesięcy)</td>
-                    <td>385 zł miesięcznie (płatne 12 miesięcy)</td>
+                <tr className='circles-table__header--row'>
+                    <td className='circles-table__header--col1'>I rok studiów</td>
+                    <td className='circles-table__header--col2'>385 zł miesięcznie (płatne 12 miesięcy)</td>
                 </tr>
-                <tr>
-                    <td>I rok studiów</td>
-                    <td>450 zł miesięcznie (płatne 10 miesięcy)</td>
-                    <td>475 zł miesięcznie (płatne 10 miesięcy)</td>
+                <tr className='circles-table__header--row'>
+                    <td className='circles-table__header--col1'>I rok studiów</td>
+                    <td className='circles-table__header--col2'>475 zł miesięcznie (płatne 10 miesięcy)</td>
                 </tr>
-            </tbody>
+                </tbody>
+            </table>
 
-        </div>
+        </>
+
 
     )
 }

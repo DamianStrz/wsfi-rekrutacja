@@ -31,6 +31,26 @@
   }
 }
 
+.hero-base {
+  background-image: linear-gradient(90deg, rgba(204,136,62,1) 0%, rgba(204,136,62,0.7875525210084033) 35%, rgba(244,200,140,1) 72%, rgba(244,200,140,0.5214460784313726) 100%);
+
+  .hero-base__title {
+    color: #ffffff;
+    font-size: 72px;
+    //text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    //         0px 8px 13px rgba(0,0,0,0.1),
+    //         0px 18px 23px rgba(0,0,0,0.1);
+
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+
+    position: absolute;
+    top: 40px;
+    right: 15%;
+  }
+
+}
+
+
 .hero-background {
   width: 100%;
 }
@@ -179,6 +199,10 @@
   10% {
     opacity: 0;
 
+  }
+
+  75% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -387,7 +411,7 @@
     }
 
     &.active {
-      width: 600px;
+      width: 500px;
       height: 500px;
       top: 50%;
       left: 50%;
@@ -400,7 +424,14 @@
       justify-content: center;
       align-items: center;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color;
+      border: 5px solid $first-color;
+
+      background-color: #ffffff;
+
+
+
+      //box-shadow: inset 0 0 2px 2px $circles-text-color;
+
 
 
 
@@ -542,7 +573,7 @@
 
 
     &.active {
-      width: 600px;
+      width: 500px;
       height: 500px;
       top: 50%;
       left: 50%;
@@ -550,7 +581,14 @@
 
       transform: translate(-50%);
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border: 5px solid $circle2-background-color;
+
+      background-color: #ffffff;
 
       @include mobile {
 
@@ -632,11 +670,15 @@
     .applicationFormLink {
 
       text-decoration: none;
-      color: $circles-text-color;
+      color: $circle2-background-color;
       font-size: 2rem;
+      width: 75%;
+
+      animation: reveal 1.3s ease-in forwards;
+
 
       &:hover {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
     }
@@ -708,7 +750,7 @@
     }
 
     &.active {
-      width: 600px;
+      width: 500px;
       height: 500px;
       top: 50%;
       left: 50%;
@@ -716,7 +758,14 @@
 
       transform: translate(-50%);
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border: 5px solid $circle3-background-color;
+
+      background-color: #ffffff;
 
       @include mobile {
 
@@ -862,15 +911,22 @@
     }
 
     &.active {
-      width: 600px;
+      width: 500px;
       height: 500px;
       top: 50%;
       left: 50%;
       z-index: 2;
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color;
-
       transform: translate(-50%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border: 5px solid $circle4-background-color;
+
+      background-color: #ffffff;
 
       @include mobile {
 
@@ -892,7 +948,7 @@
     &.inactive {
       top: 300px;
       left: 60px;
-      cursor: none;
+      cursor: pointer;
 
       @include mobile {
         height: 0;
@@ -977,6 +1033,7 @@
 
   }
 
+
   .circles5-left {
 
     width: 160px;
@@ -1014,7 +1071,7 @@
     }
 
     &.active {
-      width: 600px;
+      width: 500px;
       height: 500px;
       top: 50%;
       left: 50%;
@@ -1022,7 +1079,14 @@
 
       transform: translate(-50%);
 
-      box-shadow: inset 0 0 2px 2px $circles-text-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border: 5px solid $circle5-background-color;
+
+      background-color: #ffffff;
 
       @include mobile {
 
@@ -1131,20 +1195,27 @@
   }
 }
 
+.circles-text {
+  max-height: 90%;
+  width: 72%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0 5px;
+  cursor: default;
+  color: $text-color;
+
+  animation: reveal 1.3s ease-in forwards;
+}
+
 .circles-list {
   margin: 0;
   list-style-position: inside;
   list-style-type: pointer;
-  line-height: 2;
-  max-height: 90%;
-  width: 85%;
-  max-width: 600px;
-  text-align: center;
-  font-size: 1.25rem;
-  padding: 0 5px;
-  cursor: default;
+  padding: 0;
 
-  animation: reveal 1.3s ease-in forwards;
+
+  //animation: reveal 1.3s ease-in forwards;
 
   @include mobile {
     font-size: 0.8rem;
@@ -1153,21 +1224,95 @@
   }
 
   .circles-list__el {
-    color: $circles-text-color;
+    color: $first-color;
 
     &:hover {
-      color: darken($circles-text-color,5%);
+      color: darken($first-color, 5%);
 
     }
   }
 
 }
 
+.circle-calendar {
+  max-height: 90%;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 5px;
+  cursor: default;
+  color: $circle3-background-color;
+
+
+  animation: reveal 1.3s ease-in forwards;
+
+}
+
+.circles-fees {
+
+    max-height: 90%;
+    width: 85%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 5px;
+    cursor: default;
+    color: $circle4-background-color;
+
+    animation: reveal 1.3s ease-in forwards;
+
+    >h2 {
+      margin-top: 0;
+    }
+}
+
+.circles-table {
+  max-height: 30%;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0 5px;
+  cursor: default;
+  color: $circle4-background-color;
+
+  animation: reveal 1.3s ease-in forwards;
+
+}
+
+.circles-table__header--row {
+  border: 1px solid lighten($circle4-background-color,15%);
+
+}
+.circles-table__header--col1 {
+  width: 30%;
+  border: 1px solid lighten($circle4-background-color,15%);
+  padding: 4px;
+}
+.circles-table__header--col2 {
+  width: 70%;
+  border: 1px solid lighten($circle4-background-color,15%);
+  padding: 4px;
+}
+
+.circles-five {
+  max-height: 90%;
+  width: 72%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 5px;
+  cursor: default;
+  color: $circle5-background-color;
+
+  animation: reveal 1.3s ease-in forwards;
+}
 
 //Details
 
 .container.details{
-  background: url(../assets/details-background-new.png) no-repeat center;
+  background: url(../assets/details-bckgrnd-without-text.png) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 400px;
@@ -1192,8 +1337,29 @@
   }
 
   .details-title {
+    //color: $details-title-color;
+    //text-decoration: none;
+    position: absolute;
+    top: 40px;
+    left: 320px;
+
+
+
     color: $details-title-color;
-    text-decoration: none;
+    font-size: 42px;
+  }
+
+  .details-subtitle {
+    //color: $details-title-color;
+    //text-decoration: none;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+
+
+
+    color: $details-title-color;
+    font-size: 36px;
 
 
   }
@@ -1208,7 +1374,7 @@
     box-shadow: 0 4px 4px darken($details-circle1-color,15%);
 
     position: absolute;
-    top: -40px;
+    top: -110px;
     left: 200px;
     opacity: 0.8;
 
@@ -1229,8 +1395,8 @@
     box-shadow: 0 4px 4px darken($details-circle2-color,15%);
 
     position: absolute;
-    top: 30px;
-    left: 560px;
+    top: -55px;
+    right: 60px;
     opacity: 0.75;
 
     @include mobile {
@@ -1250,8 +1416,8 @@
     box-shadow: 0 4px 4px darken($details-circle3-color,15%);
 
     position: absolute;
-    top: 160px;
-    left: 900px;
+    top: 80px;
+    left: 100px;
     opacity: 0.7;
 
     @include mobile {
@@ -1271,8 +1437,8 @@
     box-shadow: 0 4px 4px darken($details-circle4-color,15%);
 
     position: absolute;
-    top: 220px;
-    left: 320px;
+    top: 250px;
+    right: 200px;
     opacity: 0.65;
 
     @include mobile {
@@ -1315,8 +1481,9 @@
 
 
 
+
   .footer-content {
-    color: $text-color;
+    color: $footer-text-color;
     font-size: 14px;
     display: flex;
     justify-content: space-between;

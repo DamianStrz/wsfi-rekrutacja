@@ -33,6 +33,11 @@
 
 }
 
+$first-color: #5e6464;
+$second-color: #cc883e;
+$third-color: #f4c88c;
+$fourth-color: #a5c6b1;
+$fifth-color: #d2afae;
 
 
 // variables
@@ -42,31 +47,32 @@ $font: 'antonioregular', Tahoma, sans-serif;
 $body-background: #D9D9D9;
 $container-background-color: #FFFFFF;
 
-$text-color: #514545;
+$text-color: $first-color;
 
-$hero-title-color:#B59629;
+$hero-title-color:$second-color;
 
 $sliderbox-text-color: #FFFFFF;
-$slider-background-color: #F8E5A2;
+$slider-background-color: $third-color;
 
 
 
 $circles-text-color: #FFFFFF;
-$circle1-background-color: #E0A22A;
-$circle2-background-color: #B59629;
-$circle3-background-color: #F3D159;
-$circle4-background-color: #E3D233;
-$circle5-background-color: #F3E13C;
+$circle1-background-color: $first-color;
+$circle2-background-color: $fourth-color;
+$circle3-background-color: $second-color;
+$circle4-background-color: $fifth-color;
+$circle5-background-color: $third-color;
 
 $circle-background-color: #F0E6E6;
 
-$details-title-color: #B59629;
+$details-title-color: $first-color;
 $details-circle1-color: #DFF3D2;
 $details-circle2-color: #EFF0E6;
 $details-circle3-color: #F0EDE6;
 $details-circle4-color: #E8F0E6;
 
-$footer-background-color: #E3D233;
+$footer-background-color: $fifth-color;
+$footer-text-color: $text-color;
 
 //breakpoints
 
