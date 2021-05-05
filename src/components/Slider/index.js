@@ -111,7 +111,7 @@ const Slider = () => {
     return(
 
         <div className='container slider'>
-            <h1 className='slider-title'>Specjalności na kierunku Ekonomia on-line</h1>
+            <h1 className='slider-title'>Specjalności na kierunku Ekonomia <span className='online'>on-line</span></h1>
             <div className='slider-boxes'>
                 <div className='slider-boxes__box box1' onClick={handleColorChange} id='box-one'>
                     <span className='slider-boxes__text'>Rachunkowość i finanse</span>

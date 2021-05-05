@@ -277,11 +277,11 @@ const AnimatedInfo = () => {
             <div className='circles-field'>
                 <div className='circles1-left' id='firstCircle1' onClick={handleCircleClick}>
                     {circleData.firstActive === false
-                        ? 'Wymagane dokumenty'
+                        ? 'Dokumenty'
                         : <div className='circles-text'>
                             <ul className='circles-list' onClick={handleListClick}>
                                 <li className='circles-list__el' onClick={handleListClick}>Świadectwo dojrzałości,</li>
-                                <li className='circles-list__el' onClick={handleListClick}>Przesłanie formularza Rekrutacji on-line [przejdź],</li>
+                                <li className='circles-list__el' onClick={handleListClick}>Przesłanie formularza Rekrutacji <span className='online'>on-line</span> [przejdź],</li>
                                 <li className='circles-list__el' onClick={handleListClick}>2 fotografie (35x45 mm, jedna elektroniczna, format jpg)</li>
                                 <li className='circles-list__el' onClick={handleListClick}>Dowód osobisty (do wglądu),</li>
                                 <li className='circles-list__el' onClick={handleListClick}>Kserokopia wniesienia opłaty rekrutacyjnej.</li>
@@ -303,7 +303,7 @@ const AnimatedInfo = () => {
                         : <a className='applicationFormLink'
                              href={recruitmentForm}
                              target='_blank'
-                             rel='noopener noreferrer'>Przejdź do formularza rekrutacji online</a>
+                             rel='noopener noreferrer'>Przejdź do formularza rekrutacji <span className='online'>on-line</span></a>
                     }
 
                 </div>
@@ -350,7 +350,7 @@ const Fee = () => {
                 <thead className='circles-table__header'>
                 <tr className='circles-table__header--row'>
                     <th className='circles-table__header--col1'>Rekrutacja 2021/22</th>
-                    <th className='circles-table__header--col2'>Czesne (studia online)</th>
+                    <th className='circles-table__header--col2'>Czesne (studia <span className='online'>on-line</span>)</th>
                 </tr>
                 </thead>
                 <tbody>

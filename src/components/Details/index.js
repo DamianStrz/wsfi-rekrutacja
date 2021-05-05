@@ -12,7 +12,7 @@ const Details = () => {
             {/*    <a className='details-title' href={link} target='_blank' rel='noopener noreferrer'>Studiuj z nami!</a>*/}
             {/*</h1>*/}
             <div className='details-circle1'/>
-            <p className='details-title'>Studiuj z nami online!</p>
+            <p className='details-title'>Studiuj z nami <span className='online'>on-line</span>!</p>
             <div className='details-circle2'/>
             <div className='details-circle3'/>
             <p className='details-subtitle'>Rekrutacja rusza 1 czerwca!</p>
