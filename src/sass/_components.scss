@@ -694,7 +694,7 @@
     .applicationFormLink {
 
       text-decoration: none;
-      color: $circle2-background-color;
+      color: darken($circle2-background-color,20%);
       font-size: 2rem;
       width: 75%;
 
@@ -1227,7 +1227,7 @@
   font-size: 1rem;
   padding: 0 5px;
   cursor: default;
-  color: $text-color;
+  color: darken($text-color,20%);
 
   animation: reveal 1.3s ease-in forwards;
 }
@@ -1248,7 +1248,7 @@
   }
 
   .circles-list__el {
-    color: $first-color;
+    color: darken($first-color,20%);
 
     &:hover {
       color: darken($first-color, 5%);
@@ -1266,7 +1266,7 @@
   font-size: 2rem;
   padding: 0 5px;
   cursor: default;
-  color: $circle3-background-color;
+  color: darken($circle3-background-color,20%);
 
 
   animation: reveal 1.3s ease-in forwards;
@@ -1282,7 +1282,7 @@
     font-size: 1rem;
     padding: 0 5px;
     cursor: default;
-    color: $circle4-background-color;
+    color: darken($circle4-background-color,20%);
 
     animation: reveal 1.3s ease-in forwards;
 
@@ -1299,7 +1299,7 @@
   font-size: 1rem;
   padding: 0 5px;
   cursor: default;
-  color: $circle4-background-color;
+  color: darken($circle4-background-color,20%);
 
   animation: reveal 1.3s ease-in forwards;
 
@@ -1328,7 +1328,7 @@
   font-size: 2rem;
   padding: 0 5px;
   cursor: default;
-  color: $circle5-background-color;
+  color: darken($circle5-background-color,20%);
 
   animation: reveal 1.3s ease-in forwards;
 }

@@ -344,7 +344,7 @@ const Fee = () => {
                 <h2>KOSZTY REKRUTACJI:</h2>
                 <p>85zł - opłata rekrutacyjna</p>
                 <p>350zł - wpisowe</p>
-                <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): 80 1020 3352 0000 1102 0010 5684</p>
+                <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): <strong>80 1020 3352 0000 1102 0010 5684</strong></p>
             </div>
             <table className='circles-table'>
                 <thead className='circles-table__header'>
@@ -359,11 +359,11 @@ const Fee = () => {
                     <td className='circles-table__header--col2'>350 zł miesięcznie (płatne 12 miesięcy)</td>
                 </tr>
                 <tr className='circles-table__header--row'>
-                    <td className='circles-table__header--col1'>I rok studiów</td>
+                    <td className='circles-table__header--col1'>II rok studiów</td>
                     <td className='circles-table__header--col2'>385 zł miesięcznie (płatne 12 miesięcy)</td>
                 </tr>
                 <tr className='circles-table__header--row'>
-                    <td className='circles-table__header--col1'>I rok studiów</td>
+                    <td className='circles-table__header--col1'>III rok studiów</td>
                     <td className='circles-table__header--col2'>475 zł miesięcznie (płatne 10 miesięcy)</td>
                 </tr>
                 </tbody>
