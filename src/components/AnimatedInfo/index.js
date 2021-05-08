@@ -25,9 +25,6 @@ const AnimatedInfo = () => {
 
     useEffect(() => {
 
-        console.log(circleData.secondActive);
-
-
 
     })
 
@@ -63,7 +60,6 @@ const AnimatedInfo = () => {
                 counter: circleData.counter + 1
             });
 
-            console.log(circleData.counter)
 
 
             e.target.classList.toggle('active');
@@ -320,7 +316,6 @@ const AnimatedInfo = () => {
 
                 if (e.target.classList.contains('active')) {
 
-                    console.log(circleData.whichIsActive)
 
                     document.getElementById('firstCircle2').classList.add('inactive4');
                     document.getElementById('firstCircle2').classList.add('inactive2');
@@ -417,7 +412,21 @@ const AnimatedInfo = () => {
 
             }
 
+
+        if (e.target.id === 'firstCircle3') {
+            firstCircle1.classList.add('inactive2');
+            firstCircle1.classList.toggle('inactive3');
+            firstCircle2.classList.toggle('inactive3');
+
+            !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive3')
+            !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive2')
+            
+
+        }
+
             e.stopPropagation();
+
+
 
 
 
@@ -460,7 +469,6 @@ const AnimatedInfo = () => {
             document.getElementById('firstCircle5').classList.toggle('inactive5');
 
         } else if (circleData.thirdActive === true) {
-            console.log(circleData.thirdActive)
             setCircleData({...circleData, thirdActive: !circleData.thirdActive});
 
             document.getElementById('firstCircle3').classList.toggle('active');
