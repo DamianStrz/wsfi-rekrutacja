@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import linkBackground from "../../assets/logo-wsfi-braz-bez-tła.png";
+import linkBackground from "../../assets/logo-wsfi.jpg";
 
 const Footer = () => {
 

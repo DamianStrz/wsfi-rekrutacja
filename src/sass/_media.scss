@@ -1,13 +1,13 @@
 @import 'base';
 
 @mixin mobile {
-  @media only screen and (max-width: #{$mobile}) {
+  @media only screen and (min-width: #{$mobile}) and (max-width: #{$large}) {
     @content
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet}) {
+  @media only screen and (min-width: #{$tablet}) and (max-width: #{$large}) {
     @content
   }
 }

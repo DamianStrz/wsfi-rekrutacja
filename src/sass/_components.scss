@@ -34,6 +34,10 @@
 
   }
 
+  @include tablet {
+    right: 2%;
+  }
+
   .hero-link__background {
     width: 180px;
     height: 180px;
@@ -43,6 +47,13 @@
       width: 60px;
       height: 60px;
       z-index: 2;
+
+    }
+
+    @include tablet {
+
+      width: 120px;
+      height: 120px;
 
     }
   }
@@ -74,6 +85,10 @@
       top: 0;
       right: 4%;
       font-size: 2rem;
+    }
+
+    @include tablet {
+      font-size: 4rem;
     }
   }
 
@@ -171,7 +186,6 @@
 
   @include mobile {
     padding-bottom: 20px;
-    z-index: -1;
 
   }
 
@@ -372,7 +386,7 @@
     pointer-events: none;
 
     @include mobile {
-      padding: 20px;
+      padding: 20px 20px 5px 20px;
     }
 
   }
@@ -491,7 +505,7 @@
 
     position: absolute;
     top: 20px;
-    left: 590px;
+    left: 600px;
     z-index: 2;
 
     transition: all 0.8s linear;
@@ -552,8 +566,8 @@
     &.inactive2 {
       left: 900px;
       top: 0;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
@@ -566,8 +580,8 @@
     &.inactive3 {
       left: 900px;
       top: 300px;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
@@ -581,8 +595,8 @@
     &.inactive4 {
       top: 300px;
       left: 60px;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
@@ -595,8 +609,8 @@
     &.inactive5 {
       top: 10px;
       left: 50px;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
@@ -656,7 +670,7 @@
 
     position: absolute;
     top: 230px;
-    left: 900px;
+    right: 10%;
     z-index: 2;
 
     transition: all 1s linear;
@@ -829,7 +843,7 @@
 
     position: absolute;
     top: 260px;
-    left: 1000px;
+    right: 5%;
     z-index: 1;
 
     transition: all 1s linear;
@@ -918,8 +932,6 @@
 
       }
 
-    }
-
     &.inactive {
       left: 900px;
       top: 300px;
@@ -1006,6 +1018,7 @@
     }
 
   }
+}
 
   .circles3-right {
     width: 125px;
@@ -1051,7 +1064,7 @@
 
     position: absolute;
     top: 200px;
-    left: 70px;
+    left: 8%;
     z-index: 2;
 
     transition: all 1s linear;
@@ -1204,7 +1217,7 @@
 
     position: absolute;
     top: 60px;
-    left: 0;
+    left: 5%;
     z-index: 1;
 
     transition: all 1s linear;
@@ -1238,7 +1251,7 @@
 
     position: absolute;
     top: 0;
-    left: 270px;
+    left: 300px;
     z-index: 2;
 
     transition: all 1s linear;
@@ -1560,7 +1573,6 @@
   height: 400px;
 
 
-
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -1591,10 +1603,16 @@
     font-size: 42px;
 
     @include mobile {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
 
       top: 2%;
-      left: 2%;
+      left: 5%;
+    }
+
+    @include tablet {
+
+      font-size: 2rem;
+
     }
   }
 
@@ -1608,10 +1626,16 @@
     font-size: 36px;
 
     @include mobile {
-      font-size: 1rem;
+      font-size: 0.8rem;
 
       bottom: 6%;
-      left: 2%;
+      left: 5%;
+    }
+
+    @include tablet {
+
+      font-size: 1.6rem;
+
     }
 
 
@@ -1716,7 +1740,6 @@
 
 
   @include mobile {
-    flex-direction: column;
     box-shadow: 0 -6px 12px 6px $circles-text-color;
   }
 
@@ -1754,47 +1777,61 @@
       font-size: 0.6rem;
       align-items: flex-start;
     }
-  .footer-content__left {
-    width: 33%;
-    font-style: normal;
 
-    @include mobile {
-      width: 50%;
+    @include tablet {
+      font-size: 1rem;
     }
 
-    }
-  .footer-content__logo {
-    max-width: 90px;
-    max-height: 90px;
 
-    @include mobile {
-      max-width: 45px;
-      max-height: 45px;
-    }
-
-    }
-  .footer-content__right {
-    width: 33%;
-    font-style: normal;
-
-    @include mobile {
-      width: 40%;
-    }
-
-    }
-  .footer-content__facebook {
-    > i {
-      text-decoration: none;
-      color: #166FE5;
-      font-size: 18px;
+    .footer-content__left {
+      width: 33%;
+      font-style: normal;
 
       @include mobile {
-        font-size: 0.7rem;
+        width: 50%;
       }
 
     }
-  }
+    .footer-content__logo {
+      max-width: 90px;
+      max-height: 90px;
 
+      @include mobile {
+        max-width: 45px;
+        max-height: 45px;
+      }
+
+      @include tablet {
+        max-width: 80px;
+        max-height: 80px;
+      }
+
+      }
+    .footer-content__right {
+      width: 33%;
+      font-style: normal;
+
+      @include mobile {
+        width: 40%;
+      }
+
+      }
+    .footer-content__facebook {
+      > i {
+        text-decoration: none;
+        color: #166FE5;
+        font-size: 18px;
+
+        @include mobile {
+          font-size: 0.6rem;
+        }
+
+        @include tablet {
+          font-size: 1rem;
+        }
+
+      }
+    }
   }
 }
 

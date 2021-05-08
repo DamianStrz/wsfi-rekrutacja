@@ -141,6 +141,7 @@ const SlideContent = ({slideData,onClick}) => {
                         <a href={slideData.link} className='slide-content__link' target='_blank' rel='noopener noreferrer'>
                             {slideData.linkText}</a>
                     </p>
+                    <i className="fa fa-angle-up"></i>
                 </div>
             </div>
         </div>
