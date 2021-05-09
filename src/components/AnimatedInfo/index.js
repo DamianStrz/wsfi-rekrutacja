@@ -412,6 +412,7 @@ const AnimatedInfo = () => {
 
             }
 
+        //kółka zmieniają się miejscami
 
         if (e.target.id === 'firstCircle3') {
             firstCircle1.classList.add('inactive2');
@@ -420,7 +421,7 @@ const AnimatedInfo = () => {
 
             !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive3')
             !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive2')
-            
+
 
         }
 
