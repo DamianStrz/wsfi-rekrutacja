@@ -566,28 +566,34 @@
     &.inactive2 {
       left: 900px;
       top: 0;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
         position: relative;
         left: 0;
         top: 0;
+
+        width: 90%;
+        height: 50px;
       }
     }
 
     &.inactive3 {
       left: 900px;
       top: 300px;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
         position: relative;
         left: 0;
         top: 0;
+
+        width: 90%;
+        height: 50px;
       }
     }
 
@@ -595,28 +601,34 @@
     &.inactive4 {
       top: 300px;
       left: 60px;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
         position: relative;
         left: 0;
         top: 0;
+
+        width: 90%;
+        height: 50px;
       }
     }
 
     &.inactive5 {
       top: 10px;
       left: 50px;
-      width: 90%;
-      height: 50px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
 
       @include mobile {
         position: relative;
         left: 0;
         top: 0;
+
+        width: 90%;
+        height: 50px;
       }
     }
 
@@ -1412,7 +1424,7 @@
 
     &.inactive {
       top: 40px;
-      left: 0;
+      left: 10px;
     }
 
     @include mobile {
