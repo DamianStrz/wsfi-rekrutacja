@@ -308,7 +308,7 @@ const AnimatedInfo = () => {
                 document.getElementById('firstCircle2').classList.remove('inactive2');
                 document.getElementById('firstCircle3').classList.remove('inactive3');
 
-                circleData.whichIsActive !== 0 && e.target.classList.add(`inactive${circleData.whichIsActive}`);
+                // circleData.whichIsActive !== 0 && e.target.classList.add(`inactive${circleData.whichIsActive}`);
 
                 // document.getElementById('firstCircle2').classList.remove('inactive');
                 // document.getElementById('firstCircle3').classList.remove('inactive');
@@ -317,7 +317,7 @@ const AnimatedInfo = () => {
                 if (e.target.classList.contains('active')) {
 
 
-                    document.getElementById('firstCircle2').classList.add('inactive4');
+                    document.getElementById('firstCircle1').classList.add('inactive4');
                     document.getElementById('firstCircle2').classList.add('inactive2');
                     document.getElementById('firstCircle3').classList.add('inactive3');
                     document.getElementById('firstCircle5').classList.add('inactive5');
@@ -380,13 +380,18 @@ const AnimatedInfo = () => {
                 document.getElementById('firstCircle4').classList.remove('active');
 
                 document.getElementById('firstCircle1').classList.remove('inactive5');
+                document.getElementById('firstCircle1').classList.remove('inactive2');
+                document.getElementById('firstCircle1').classList.remove('inactive3');
+                document.getElementById('firstCircle1').classList.remove('inactive4');
+
+
                 document.getElementById('firstCircle2').classList.remove('inactive2');
                 document.getElementById('firstCircle3').classList.remove('inactive3');
                 document.getElementById('firstCircle4').classList.remove('inactive4');
 
-                document.getElementById('firstCircle2').classList.remove('inactive');
-                document.getElementById('firstCircle3').classList.remove('inactive');
-                document.getElementById('firstCircle4').classList.remove('inactive');
+                // document.getElementById('firstCircle2').classList.remove('inactive');
+                // document.getElementById('firstCircle3').classList.remove('inactive');
+                // document.getElementById('firstCircle4').classList.remove('inactive');
 
                 if (e.target.classList.contains('active')) {
 
@@ -414,19 +419,18 @@ const AnimatedInfo = () => {
 
         //kółka zmieniają się miejscami
 
-        if (e.target.id === 'firstCircle3') {
-            firstCircle1.classList.add('inactive2');
-            firstCircle1.classList.toggle('inactive3');
-            firstCircle2.classList.toggle('inactive3');
-
-            !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive3')
-            !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive2')
-
-
-        }
+        // if (e.target.id === 'firstCircle3') {
+        //     firstCircle1.classList.add('inactive2');
+        //     firstCircle1.classList.toggle('inactive3');
+        //     firstCircle2.classList.toggle('inactive3');
+        //
+        //     !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive3')
+        //     !e.target.classList.contains('active') && firstCircle1.classList.remove('inactive2')
+        //
+        //
+        // }
 
             e.stopPropagation();
-
 
 
 
