@@ -13,7 +13,8 @@ const AnimatedInfo = () => {
         fourthActive: false,
         fifthActive: false,
         whichIsActive: circle,
-        counter: 0
+        counter: 0,
+        circleOneData: 1
     })
 
 
@@ -420,6 +421,8 @@ const AnimatedInfo = () => {
 
         localStorage.setItem('number',e.target.dataset.circle);
 
+        console.log(circleData.circleOneData)
+
         if (e.target.dataset.circle === "1" && !circleData.clicked) {
 
             setCircleData(prevState => ({...prevState, firstActive: true}))
@@ -438,7 +441,10 @@ const AnimatedInfo = () => {
         }
 
         if (e.target.dataset.circle === "2" && !circleData.clicked) {
-            setCircleData(prevState => ({...prevState, secondActive: true}))
+            setCircleData(prevState => ({...prevState,
+                secondActive: true,
+                circleOneData: e.target.dataset.circle
+            }))
 
             firstCircle1.classList.toggle("inactive2")
             firstCircle3.classList.toggle("inactive3")
@@ -454,7 +460,11 @@ const AnimatedInfo = () => {
         }
 
         if (e.target.dataset.circle === "3" && !circleData.clicked) {
-            setCircleData(prevState => ({...prevState, thirdActive: true}))
+            setCircleData(prevState => ({...prevState,
+                thirdActive: true,
+                circleOneData: e.target.dataset.circle
+
+            }))
 
             firstCircle1.classList.toggle("inactive2")
             firstCircle2.classList.toggle("inactive3")
@@ -470,7 +480,11 @@ const AnimatedInfo = () => {
         }
 
         if (e.target.dataset.circle === "4" && !circleData.clicked) {
-            setCircleData(prevState => ({...prevState, fourthActive: true}))
+            setCircleData(prevState => ({...prevState,
+                fourthActive: true,
+                circleOneData: e.target.dataset.circle
+
+            }))
 
             firstCircle1.classList.toggle("inactive2")
             firstCircle2.classList.toggle("inactive3")
@@ -486,7 +500,11 @@ const AnimatedInfo = () => {
         }
 
         if (e.target.dataset.circle === "5" && !circleData.clicked) {
-            setCircleData(prevState => ({...prevState, fifthActive: true}))
+            setCircleData(prevState => ({...prevState,
+                fifthActive: true,
+                circleOneData: e.target.dataset.circle
+
+            }))
 
             firstCircle1.classList.toggle("inactive2")
             firstCircle2.classList.toggle("inactive3")
@@ -500,7 +518,7 @@ const AnimatedInfo = () => {
             document.getElementById('secondCircle5').classList.toggle('inactive');
         }
 
-        if (e.target.dataset.circle === "1" && circleData.clicked) {
+        if (e.target.id === "firstCircle1" && circleData.clicked) {
 
             setCircleData(prevState => ({...prevState,
                 firstActive: !circleData.firstActive,
@@ -510,6 +528,8 @@ const AnimatedInfo = () => {
                 fifthActive: false,
 
             }))
+
+            e.target.dataset.circle = "1";
 
             e.target.classList.remove("inactive2");
             e.target.classList.remove("inactive3");
@@ -558,6 +578,7 @@ const AnimatedInfo = () => {
                 thirdActive: false,
                 fourthActive: false,
                 fifthActive: false,
+                circleOneData: e.target.dataset.circle
 
             }))
 
@@ -566,7 +587,9 @@ const AnimatedInfo = () => {
             e.target.classList.remove("inactive4");
             e.target.classList.remove("inactive5");
 
-            firstCircle1.classList.add("inactive2");
+            firstCircle1.classList.add(`inactive2`);
+            firstCircle1.classList.remove(`inactive${!circleData.circleOneData}`);
+
             firstCircle1.classList.remove("inactive3");
             firstCircle1.classList.remove("inactive4");
             firstCircle1.classList.remove("inactive5");
@@ -608,6 +631,7 @@ const AnimatedInfo = () => {
                 thirdActive: true,
                 fourthActive: false,
                 fifthActive: false,
+                circleOneData: e.target.dataset.circle
 
             }))
 
@@ -621,18 +645,18 @@ const AnimatedInfo = () => {
             firstCircle1.classList.remove("inactive4");
             firstCircle1.classList.remove("inactive5");
 
-            firstCircle2.classList.add("inactive4");
-            firstCircle2.classList.remove("inactive2");
+            firstCircle2.classList.add("inactive2");
             firstCircle2.classList.remove("inactive3");
+            firstCircle2.classList.remove("inactive4");
             firstCircle2.classList.remove("inactive5");
 
-            firstCircle4.classList.add("inactive5")
+            firstCircle4.classList.add("inactive4")
             firstCircle4.classList.remove("inactive2")
             firstCircle4.classList.remove("inactive3")
-            firstCircle4.classList.remove("inactive4")
+            firstCircle4.classList.remove("inactive5")
 
-            firstCircle5.classList.add("inactive2")
-            firstCircle5.classList.remove("inactive5")
+            firstCircle5.classList.add("inactive5")
+            firstCircle5.classList.remove("inactive2")
             firstCircle5.classList.remove("inactive3")
             firstCircle5.classList.remove("inactive4")
 
@@ -658,6 +682,7 @@ const AnimatedInfo = () => {
                 thirdActive: false,
                 fourthActive: true,
                 fifthActive: false,
+                circleOneData: e.target.dataset.circle
 
 
             }))
@@ -674,21 +699,21 @@ const AnimatedInfo = () => {
 
 
             firstCircle2.classList.remove("inactive2");
-            firstCircle2.classList.remove("inactive4");
             firstCircle2.classList.remove("inactive3");
-            firstCircle2.classList.add("inactive5");
+            firstCircle2.classList.remove("inactive5");
+            firstCircle2.classList.add("inactive2");
 
 
-            firstCircle3.classList.remove("inactive4")
+            firstCircle3.classList.remove("inactive2")
             firstCircle3.classList.remove("inactive3")
-            firstCircle3.classList.remove("inactive5")
-            firstCircle3.classList.add("inactive2")
+            firstCircle3.classList.remove("inactive4")
+            firstCircle3.classList.add("inactive3")
 
 
             firstCircle5.classList.remove("inactive2")
-            firstCircle5.classList.remove("inactive5")
+            firstCircle5.classList.remove("inactive3")
             firstCircle5.classList.remove("inactive4")
-            firstCircle5.classList.add("inactive3")
+            firstCircle5.classList.add("inactive5")
 
             firstCircle1.classList.remove("active")
             firstCircle2.classList.remove("active")
@@ -711,6 +736,7 @@ const AnimatedInfo = () => {
                 thirdActive: false,
                 fourthActive: false,
                 fifthActive: true,
+                circleOneData: e.target.dataset.circle
 
             }))
 
@@ -724,11 +750,10 @@ const AnimatedInfo = () => {
             firstCircle1.classList.remove("inactive2");
             firstCircle1.classList.add("inactive5");
 
-
-            firstCircle2.classList.remove("inactive2");
             firstCircle2.classList.remove("inactive3");
+            firstCircle2.classList.remove("inactive4");
             firstCircle2.classList.remove("inactive5");
-            firstCircle2.classList.add("inactive4");
+            firstCircle2.classList.add("inactive2");
 
 
             firstCircle3.classList.remove("inactive2")
@@ -739,8 +764,8 @@ const AnimatedInfo = () => {
 
             firstCircle4.classList.remove("inactive5")
             firstCircle4.classList.remove("inactive3")
-            firstCircle4.classList.remove("inactive4")
-            firstCircle4.classList.add("inactive2")
+            firstCircle4.classList.remove("inactive2")
+            firstCircle4.classList.add("inactive4")
 
             firstCircle1.classList.remove("active")
             firstCircle2.classList.remove("active")
@@ -866,7 +891,7 @@ const AnimatedInfo = () => {
         <div className='container circles'>
             <h1 className='circles-title'>Zasady rekrutacji</h1>
             <div className='circles-field'>
-                <div className='circles1-left' id='firstCircle1' data-circle={1} onClick={handleCircleClick}>
+                <div className='circles1-left' id='firstCircle1' data-circle={circleData.circleOneData} onClick={handleCircleClick}>
                     {circleData.firstActive === false
                         ? 'Dokumenty'
                         : <div className='circles-text'>
