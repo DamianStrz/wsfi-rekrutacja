@@ -508,7 +508,11 @@
     left: 600px;
     z-index: 2;
 
-    transition: all 0.8s linear;
+    transition: all 0.6s linear, background-color 0.4s linear;
+
+    &:hover {
+      background-color: darken($circle1-background-color,5%);
+    }
 
 
     @include mobile {
@@ -685,7 +689,11 @@
     right: 10%;
     z-index: 2;
 
-    transition: all 1s linear;
+    transition: all 0.6s linear, background-color 0.4s linear;
+
+    &:hover {
+      background-color: darken($circle2-background-color,5%);
+    }
 
     @include mobile {
       position: relative;
@@ -892,8 +900,11 @@
     left: 380px;
     z-index: 2;
 
-    transition: all 1s linear;
+    transition: all 0.6s linear, background-color 0.4s linear;
 
+    &:hover {
+      background-color: lighten($circle3-background-color,5%);
+    }
     @include mobile {
       position: relative;
       left: 0;
@@ -1079,8 +1090,11 @@
     left: 8%;
     z-index: 2;
 
-    transition: all 1s linear;
+    transition: all 0.6s linear, background-color 0.4s linear;
 
+    &:hover {
+      background-color: darken($circle4-background-color,5%);
+    }
     @include mobile {
       position: relative;
       left: 0;
@@ -1266,7 +1280,11 @@
     left: 300px;
     z-index: 2;
 
-    transition: all 1s linear;
+    transition: all 0.6s linear, background-color 0.4s linear;
+
+    &:hover {
+      background-color: darken($circle5-background-color,5%);
+    }
 
     @include mobile {
       position: relative;

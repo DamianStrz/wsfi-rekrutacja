@@ -17,14 +17,6 @@ const AnimatedInfo = () => {
         circleOneData: 1
     })
 
-
-    useEffect(() => {
-        const number = localStorage.getItem("number");
-        setCircleData(prevState => ({...prevState, number: number}))
-
-    },[])
-
-
     const handleCircleClick = (e) => {
 
        const firstCircle1 = document.getElementById('firstCircle1');
@@ -32,386 +24,6 @@ const AnimatedInfo = () => {
        const firstCircle3 = document.getElementById('firstCircle3');
        const firstCircle4 = document.getElementById('firstCircle4');
        const firstCircle5 = document.getElementById('firstCircle5');
-        //
-        //
-        //
-        // if (e.target.id === 'firstCircle1') {
-        //
-        //     let inactiveCircles = [
-        //         firstCircle2.dataset.circle,
-        //         firstCircle3.dataset.circle,
-        //         firstCircle4.dataset.circle,
-        //         firstCircle5.dataset.circle,
-        //     ]
-        //
-        //     circle = 1
-        //     setCircleData({
-        //         firstActive: !circleData.firstActive,
-        //         secondActive: false,
-        //         thirdActive: false,
-        //         fourthActive: false,
-        //         fifthActive: false,
-        //         whichIsActive: circle,
-        //         inactiveCircles: [...inactiveCircles],
-        //         counter: circleData.counter + 1
-        //     });
-        //
-        //
-        //
-        //     e.target.classList.toggle('active');
-        //
-        //     firstCircle1.classList.contains('inactive2') &&
-        //     firstCircle1.classList.remove('inactive2');
-        //
-        //     firstCircle1.classList.contains('inactive3') &&
-        //     firstCircle1.classList.remove('inactive3');
-        //
-        //     firstCircle1.classList.contains('inactive4') &&
-        //     firstCircle1.classList.remove('inactive4');
-        //
-        //     firstCircle1.classList.contains('inactive5') &&
-        //     firstCircle1.classList.remove('inactive5');
-        //
-        //     const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
-        //
-        //     rightCircles.forEach((el => el.classList.remove('inactive')));
-        //
-        //     document.getElementById('firstCircle2').classList.remove('active');
-        //     document.getElementById('firstCircle3').classList.remove('active');
-        //     document.getElementById('firstCircle4').classList.remove('active');
-        //     document.getElementById('firstCircle5').classList.remove('active');
-        //
-        //     document.getElementById('firstCircle2').classList.remove('inactive2');
-        //     document.getElementById('firstCircle3').classList.remove('inactive3');
-        //     document.getElementById('firstCircle4').classList.remove('inactive4');
-        //     document.getElementById('firstCircle5').classList.remove('inactive5');
-        //
-        //
-        //     if (e.target.classList.contains('active')) {
-        //
-        //         document.getElementById('firstCircle2').classList.add('inactive2');
-        //         document.getElementById('firstCircle3').classList.add('inactive3');
-        //         document.getElementById('firstCircle4').classList.add('inactive4');
-        //         document.getElementById('firstCircle5').classList.add('inactive5');
-        //
-        //         rightCircles.forEach((el => el.classList.add('inactive')));
-        //     }
-        //
-        //
-        // } else if (e.target.id === 'firstCircle2') {
-        //
-        //     let inactiveCircles = [
-        //         firstCircle1.dataset.circle,
-        //         firstCircle3.dataset.circle,
-        //         firstCircle4.dataset.circle,
-        //         firstCircle5.dataset.circle,
-        //     ]
-        //
-        //     circle = 2;
-        //
-        //     setCircleData(prevState => {
-        //         return {
-        //             ...prevState,
-        //             firstActive: false,
-        //             secondActive: !circleData.secondActive,
-        //             thirdActive: false,
-        //             fourthActive: false,
-        //             fifthActive: false,
-        //             whichIsActive: circle,
-        //             inactiveCircles: [...inactiveCircles]
-        //
-        //         }
-        //     });
-        //
-        //     e.target.classList.toggle('active');
-        //     e.target.classList.remove('inactive2');
-        //     e.target.classList.remove('inactive3');
-        //     e.target.classList.remove('inactive4');
-        //     e.target.classList.remove('inactive5');
-        //
-        //     const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
-        //
-        //     rightCircles.forEach((el => el.classList.remove('inactive')));
-        //
-        //     document.getElementById('firstCircle1').classList.remove('active');
-        //     document.getElementById('firstCircle3').classList.remove('active');
-        //     document.getElementById('firstCircle4').classList.remove('active');
-        //     document.getElementById('firstCircle5').classList.remove('active');
-        //
-        //     document.getElementById('firstCircle1').classList.remove('inactive2');
-        //     document.getElementById('firstCircle1').classList.remove('inactive3');
-        //     document.getElementById('firstCircle1').classList.remove('inactive4');
-        //     document.getElementById('firstCircle1').classList.remove('inactive5');
-        //
-        //     document.getElementById('firstCircle3').classList.remove('inactive3');
-        //     document.getElementById('firstCircle4').classList.remove('inactive4');
-        //     document.getElementById('firstCircle5').classList.remove('inactive5');
-        //
-        //     // document.getElementById('firstCircle3').classList.remove('inactive');
-        //     // document.getElementById('firstCircle4').classList.remove('inactive');
-        //     // document.getElementById('firstCircle5').classList.remove('inactive');
-        //
-        //
-        //     if (e.target.classList.contains('active')) {
-        //
-        //         circle = 2
-        //
-        //         setCircleData(prevState => {
-        //             return {
-        //                 ...prevState,
-        //                 firstActive: false,
-        //                 secondActive: !circleData.secondActive,
-        //                 thirdActive: false,
-        //                 fourthActive: false,
-        //                 fifthActive: false,
-        //                 whichIsActive: circle,
-        //
-        //             }
-        //         });
-        //
-        //         document.getElementById('firstCircle1').classList.add(`inactive2`);
-        //         document.getElementById('firstCircle3').classList.add('inactive3');
-        //         document.getElementById('firstCircle4').classList.add('inactive4');
-        //         document.getElementById('firstCircle5').classList.add('inactive5');
-        //
-        //         rightCircles.forEach((el => el.classList.add('inactive')));
-        //
-        //         circle === 3 && firstCircle2.classList.add("inactive3");
-        //
-        //     }
-        //
-        //
-        // } else if (e.target.id === 'firstCircle3') {
-        //
-        //     circle = 3
-        //     let inactiveCircles = [
-        //         firstCircle1.dataset.circle,
-        //         firstCircle2.dataset.circle,
-        //         firstCircle4.dataset.circle,
-        //         firstCircle5.dataset.circle,
-        //     ]
-        //
-        //     setCircleData(prevState => {
-        //         return {
-        //             ...prevState,
-        //             firstActive: false,
-        //             secondActive: false,
-        //             thirdActive: !circleData.thirdActive,
-        //             fourthActive: false,
-        //             fifthActive: false,
-        //             whichIsActive: 3,
-        //             inactiveCircles: [...inactiveCircles]
-        //         }
-        //     });
-        //
-        //     e.target.classList.toggle('active');
-        //     e.target.classList.remove('inactive2');
-        //     e.target.classList.remove('inactive3');
-        //     e.target.classList.remove('inactive4');
-        //     e.target.classList.remove('inactive5');
-        //
-        //     const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
-        //
-        //     rightCircles.forEach((el => el.classList.remove('inactive')));
-        //
-        //     document.getElementById('firstCircle1').classList.remove('active');
-        //     document.getElementById('firstCircle2').classList.remove('active');
-        //     document.getElementById('firstCircle4').classList.remove('active');
-        //     document.getElementById('firstCircle5').classList.remove('active');
-        //
-        //     document.getElementById('firstCircle1').classList.remove('inactive3');
-        //     document.getElementById('firstCircle1').classList.remove('inactive2');
-        //     document.getElementById('firstCircle1').classList.remove('inactive4');
-        //     document.getElementById('firstCircle1').classList.remove('inactive5');
-        //
-        //     document.getElementById('firstCircle4').classList.remove('inactive4');
-        //     document.getElementById('firstCircle5').classList.remove('inactive5');
-        //     document.getElementById('firstCircle2').classList.remove('inactive2');
-        //
-        //
-        //     // document.getElementById('firstCircle2').classList.remove('inactive');
-        //     // document.getElementById('firstCircle4').classList.remove('inactive');
-        //     // document.getElementById('firstCircle5').classList.remove('inactive');
-        //
-        //     if (e.target.classList.contains('active')) {
-        //
-        //         document.getElementById('firstCircle1').classList.add(`inactive3`);
-        //         document.getElementById('firstCircle2').classList.add('inactive2');
-        //         document.getElementById('firstCircle4').classList.add('inactive4');
-        //         document.getElementById('firstCircle5').classList.add('inactive5');
-        //
-        //         rightCircles.forEach((el => el.classList.add('inactive')));
-        //
-        //
-        //         setCircleData(prevState => {
-        //             return {
-        //                 ...prevState,
-        //                 firstActive: false,
-        //                 secondActive: false,
-        //                 thirdActive: !circleData.thirdActive,
-        //                 fourthActive: false,
-        //                 fifthActive: false,
-        //                 whichIsActive: 3,
-        //                 inactiveCircles: [...inactiveCircles]
-        //             }
-        //         });
-        //     }
-        //
-        //
-        //
-        //
-        //     } else if (e.target.id === 'firstCircle4') {
-        //
-        //         let inactiveCircles = [
-        //             firstCircle1.dataset.circle,
-        //             firstCircle2.dataset.circle,
-        //             firstCircle3.dataset.circle,
-        //             firstCircle5.dataset.circle,
-        //         ]
-        //
-        //         setCircleData({
-        //             ...circleData,
-        //             firstActive: false,
-        //             secondActive: false,
-        //             thirdActive: false,
-        //             fourthActive: !circleData.fourthActive,
-        //             fifthActive: false,
-        //             whichIsActive: 4,
-        //             inactiveCircles: [...inactiveCircles]
-        //         });
-        //
-        //         e.target.classList.toggle('active');
-        //         e.target.classList.remove('inactive2');
-        //         e.target.classList.remove('inactive3');
-        //         e.target.classList.remove('inactive4');
-        //         e.target.classList.remove('inactive5');
-        //
-        //         const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
-        //
-        //         rightCircles.forEach((el => el.classList.remove('inactive')));
-        //
-        //         document.getElementById('firstCircle1').classList.remove('active');
-        //         document.getElementById('firstCircle2').classList.remove('active');
-        //         document.getElementById('firstCircle3').classList.remove('active');
-        //         document.getElementById('firstCircle5').classList.remove('active');
-        //
-        //         document.getElementById('firstCircle1').classList.remove('inactive4');
-        //         document.getElementById('firstCircle1').classList.remove('inactive2');
-        //         document.getElementById('firstCircle1').classList.remove('inactive3');
-        //         document.getElementById('firstCircle1').classList.remove('inactive5');
-        //
-        //         document.getElementById('firstCircle5').classList.remove('inactive5');
-        //         document.getElementById('firstCircle2').classList.remove('inactive2');
-        //         document.getElementById('firstCircle3').classList.remove('inactive3');
-        //
-        //         // circleData.whichIsActive !== 0 && e.target.classList.add(`inactive${circleData.whichIsActive}`);
-        //
-        //         // document.getElementById('firstCircle2').classList.remove('inactive');
-        //         // document.getElementById('firstCircle3').classList.remove('inactive');
-        //         // document.getElementById('firstCircle5').classList.remove('inactive');
-        //
-        //         if (e.target.classList.contains('active')) {
-        //
-        //
-        //             document.getElementById('firstCircle1').classList.add('inactive4');
-        //             document.getElementById('firstCircle2').classList.add('inactive2');
-        //             document.getElementById('firstCircle3').classList.add('inactive3');
-        //             document.getElementById('firstCircle5').classList.add('inactive5');
-        //
-        //
-        //             rightCircles.forEach((el => el.classList.add('inactive')));
-        //
-        //             setCircleData({
-        //                 ...circleData,
-        //                 firstActive: false,
-        //                 secondActive: false,
-        //                 thirdActive: false,
-        //                 fourthActive: !circleData.fourthActive,
-        //                 fifthActive: false,
-        //                 whichIsActive: 4,
-        //                 inactiveCircles: [...inactiveCircles]
-        //             });
-        //
-        //
-        //         }
-        //
-        //
-        //
-        //
-        //     } else if (e.target.id === 'firstCircle5') {
-        //
-        //
-        //         let inactiveCircles = [
-        //             firstCircle1.dataset.circle,
-        //             firstCircle2.dataset.circle,
-        //             firstCircle3.dataset.circle,
-        //             firstCircle5.dataset.circle,
-        //         ]
-        //
-        //         setCircleData({
-        //             ...circleData,
-        //
-        //             firstActive: false,
-        //             secondActive: false,
-        //             thirdActive: false,
-        //             fourthActive: false,
-        //             fifthActive: !circleData.fifthActive,
-        //             whichIsActive: 5,
-        //             inactiveCircles: [...inactiveCircles]
-        //         });
-        //
-        //         e.target.classList.toggle('active');
-        //         e.target.classList.remove('inactive2');
-        //         e.target.classList.remove('inactive3');
-        //         e.target.classList.remove('inactive4');
-        //         e.target.classList.remove('inactive5');
-        //
-        //         const rightCircles = document.querySelectorAll(`[id^="secondCircle"]`)
-        //
-        //         rightCircles.forEach((el => el.classList.remove('inactive')));
-        //
-        //         document.getElementById('firstCircle1').classList.remove('active');
-        //         document.getElementById('firstCircle2').classList.remove('active');
-        //         document.getElementById('firstCircle3').classList.remove('active');
-        //         document.getElementById('firstCircle4').classList.remove('active');
-        //
-        //         document.getElementById('firstCircle1').classList.remove('inactive5');
-        //         document.getElementById('firstCircle1').classList.remove('inactive2');
-        //         document.getElementById('firstCircle1').classList.remove('inactive3');
-        //         document.getElementById('firstCircle1').classList.remove('inactive4');
-        //
-        //
-        //         document.getElementById('firstCircle2').classList.remove('inactive2');
-        //         document.getElementById('firstCircle3').classList.remove('inactive3');
-        //         document.getElementById('firstCircle4').classList.remove('inactive4');
-        //
-        //         // document.getElementById('firstCircle2').classList.remove('inactive');
-        //         // document.getElementById('firstCircle3').classList.remove('inactive');
-        //         // document.getElementById('firstCircle4').classList.remove('inactive');
-        //
-        //         if (e.target.classList.contains('active')) {
-        //
-        //             document.getElementById('firstCircle1').classList.add('inactive5');
-        //             document.getElementById('firstCircle2').classList.add('inactive2');
-        //             document.getElementById('firstCircle3').classList.add('inactive3');
-        //             document.getElementById('firstCircle4').classList.add('inactive4');
-        //
-        //             rightCircles.forEach((el => el.classList.add('inactive')));
-        //         }
-        //
-        //         setCircleData({
-        //             ...circleData,
-        //
-        //             firstActive: false,
-        //             secondActive: false,
-        //             thirdActive: false,
-        //             fourthActive: false,
-        //             fifthActive: !circleData.fifthActive,
-        //             whichIsActive: 5,
-        //             inactiveCircles: [...inactiveCircles]
-        //         });
-        //
-        //     }
 
         //kółka zmieniają się miejscami
 
@@ -420,8 +32,6 @@ const AnimatedInfo = () => {
         setCircleData(prevState => ({...prevState, clicked: true, number: e.target.dataset.circle}))
 
         localStorage.setItem('number',e.target.dataset.circle);
-
-        console.log(circleData.circleOneData)
 
         if (e.target.dataset.circle === "1" && !circleData.clicked) {
 
@@ -518,18 +128,21 @@ const AnimatedInfo = () => {
             document.getElementById('secondCircle5').classList.toggle('inactive');
         }
 
-        if (e.target.id === "firstCircle1" && circleData.clicked) {
 
-            setCircleData(prevState => ({...prevState,
-                firstActive: !circleData.firstActive,
-                secondActive: false,
-                thirdActive: false,
-                fourthActive: false,
-                fifthActive: false,
+        if (e.currentTarget.id === "firstCircle1" && circleData.clicked) {
 
-            }))
+            setCircleData(prevState =>{
+                const number = localStorage.getItem("number");
+                return {...prevState,
+                    firstActive: true,
+                    secondActive: false,
+                    thirdActive: false,
+                    fourthActive: false,
+                    fifthActive: false,
+                    circleOneData: number
+                }
+            });
 
-            e.target.dataset.circle = "1";
 
             e.target.classList.remove("inactive2");
             e.target.classList.remove("inactive3");
@@ -546,20 +159,20 @@ const AnimatedInfo = () => {
             firstCircle3.classList.remove("inactive4");
             firstCircle3.classList.remove("inactive5");
 
-            firstCircle4.classList.add("inactive4")
-            firstCircle4.classList.remove("inactive2")
-            firstCircle4.classList.remove("inactive3")
-            firstCircle4.classList.remove("inactive5")
+            firstCircle4.classList.add("inactive4");
+            firstCircle4.classList.remove("inactive2");
+            firstCircle4.classList.remove("inactive3");
+            firstCircle4.classList.remove("inactive5");
 
-            firstCircle5.classList.add("inactive5")
-            firstCircle5.classList.remove("inactive2")
-            firstCircle5.classList.remove("inactive3")
-            firstCircle5.classList.remove("inactive4")
+            firstCircle5.classList.add("inactive5");
+            firstCircle5.classList.remove("inactive2");
+            firstCircle5.classList.remove("inactive3");
+            firstCircle5.classList.remove("inactive4");
 
-            firstCircle2.classList.remove("active")
-            firstCircle3.classList.remove("active")
-            firstCircle4.classList.remove("active")
-            firstCircle5.classList.remove("active")
+            firstCircle2.classList.remove("active");
+            firstCircle3.classList.remove("active");
+            firstCircle4.classList.remove("active");
+            firstCircle5.classList.remove("active");
 
             document.getElementById('secondCircle1').classList.add('inactive');
             document.getElementById('secondCircle2').classList.add('inactive');
@@ -570,7 +183,9 @@ const AnimatedInfo = () => {
 
         }
 
-        if (e.target.dataset.circle === "2" && circleData.clicked) {
+        if (e.currentTarget.id === "firstCircle2" && circleData.clicked) {
+
+            const number = localStorage.getItem("number");
 
             setCircleData(prevState => ({...prevState,
                 firstActive: false,
@@ -578,8 +193,7 @@ const AnimatedInfo = () => {
                 thirdActive: false,
                 fourthActive: false,
                 fifthActive: false,
-                circleOneData: e.target.dataset.circle
-
+                circleOneData: number
             }))
 
             e.target.classList.remove("inactive2");
@@ -588,7 +202,6 @@ const AnimatedInfo = () => {
             e.target.classList.remove("inactive5");
 
             firstCircle1.classList.add(`inactive2`);
-            firstCircle1.classList.remove(`inactive${!circleData.circleOneData}`);
 
             firstCircle1.classList.remove("inactive3");
             firstCircle1.classList.remove("inactive4");
@@ -619,11 +232,11 @@ const AnimatedInfo = () => {
             document.getElementById('secondCircle3').classList.add('inactive');
             document.getElementById('secondCircle4').classList.add('inactive');
             document.getElementById('secondCircle5').classList.add('inactive');
-
-
         }
 
-        if (e.target.dataset.circle === "3" && circleData.clicked) {
+        if (e.currentTarget.id === "firstCircle3" && circleData.clicked) {
+
+            const number = localStorage.getItem("number");
 
             setCircleData(prevState => ({...prevState,
                 firstActive: false,
@@ -631,7 +244,7 @@ const AnimatedInfo = () => {
                 thirdActive: true,
                 fourthActive: false,
                 fifthActive: false,
-                circleOneData: e.target.dataset.circle
+                circleOneData: number
 
             }))
 
@@ -674,7 +287,8 @@ const AnimatedInfo = () => {
 
         }
 
-        if (e.target.dataset.circle === "4" && circleData.clicked) {
+        if (e.currentTarget.id === "firstCircle4" && circleData.clicked) {
+            const number = localStorage.getItem("number");
 
             setCircleData(prevState => ({...prevState,
                 firstActive: false,
@@ -682,7 +296,7 @@ const AnimatedInfo = () => {
                 thirdActive: false,
                 fourthActive: true,
                 fifthActive: false,
-                circleOneData: e.target.dataset.circle
+                circleOneData: number
 
 
             }))
@@ -728,7 +342,9 @@ const AnimatedInfo = () => {
 
         }
 
-        if (e.target.dataset.circle === "5" && circleData.clicked) {
+        if (e.currentTarget.id === "firstCircle5" && circleData.clicked) {
+
+            const number = localStorage.getItem("number");
 
             setCircleData(prevState => ({...prevState,
                 firstActive: false,
@@ -736,7 +352,7 @@ const AnimatedInfo = () => {
                 thirdActive: false,
                 fourthActive: false,
                 fifthActive: true,
-                circleOneData: e.target.dataset.circle
+                circleOneData: number
 
             }))
 
@@ -787,104 +403,89 @@ const AnimatedInfo = () => {
 
         if (circleData.firstActive === true) {
 
-            setCircleData({...circleData, firstActive: !circleData.firstActive});
+            setCircleData({...circleData, firstActive: true});
 
-            document.getElementById('firstCircle1').classList.toggle('active');
+            document.getElementById('firstCircle1').classList.add('active');
 
-            document.getElementById('secondCircle1').classList.toggle('inactive');
-            document.getElementById('secondCircle2').classList.toggle('inactive');
-            document.getElementById('secondCircle3').classList.toggle('inactive');
-            document.getElementById('secondCircle4').classList.toggle('inactive');
-            document.getElementById('secondCircle5').classList.toggle('inactive');
+            document.getElementById('secondCircle1').classList.add('inactive');
+            document.getElementById('secondCircle2').classList.add('inactive');
+            document.getElementById('secondCircle3').classList.add('inactive');
+            document.getElementById('secondCircle4').classList.add('inactive');
+            document.getElementById('secondCircle5').classList.add('inactive');
 
-            document.getElementById('firstCircle2').classList.toggle('inactive2');
-            document.getElementById('firstCircle3').classList.toggle('inactive3');
-            document.getElementById('firstCircle4').classList.toggle('inactive4');
-            document.getElementById('firstCircle5').classList.toggle('inactive5');
+            document.getElementById('firstCircle2').classList.add('inactive2');
+            document.getElementById('firstCircle3').classList.add('inactive3');
+            document.getElementById('firstCircle4').classList.add('inactive4');
+            document.getElementById('firstCircle5').classList.add('inactive5');
 
         } else if (circleData.secondActive === true) {
-            setCircleData({...circleData, secondActive: !circleData.secondActive});
+            setCircleData({...circleData, secondActive: true});
 
-            document.getElementById('firstCircle2').classList.toggle('active');
+            document.getElementById('firstCircle2').classList.add('active');
 
-            document.getElementById('secondCircle1').classList.toggle('inactive');
-            document.getElementById('secondCircle2').classList.toggle('inactive');
-            document.getElementById('secondCircle3').classList.toggle('inactive');
-            document.getElementById('secondCircle4').classList.toggle('inactive');
-            document.getElementById('secondCircle5').classList.toggle('inactive');
+            document.getElementById('secondCircle1').classList.add('inactive');
+            document.getElementById('secondCircle2').classList.add('inactive');
+            document.getElementById('secondCircle3').classList.add('inactive');
+            document.getElementById('secondCircle4').classList.add('inactive');
+            document.getElementById('secondCircle5').classList.add('inactive');
 
-            document.getElementById('firstCircle1').classList.toggle('inactive2');
-            document.getElementById('firstCircle3').classList.toggle('inactive3');
-            document.getElementById('firstCircle4').classList.toggle('inactive4');
-            document.getElementById('firstCircle5').classList.toggle('inactive5');
+            document.getElementById('firstCircle1').classList.add('inactive2');
+            document.getElementById('firstCircle3').classList.add('inactive3');
+            document.getElementById('firstCircle4').classList.add('inactive4');
+            document.getElementById('firstCircle5').classList.add('inactive5');
 
         } else if (circleData.thirdActive === true) {
-            setCircleData({...circleData, thirdActive: !circleData.thirdActive});
+            setCircleData({...circleData, thirdActive: true});
 
-            document.getElementById('firstCircle3').classList.toggle('active');
+            document.getElementById('firstCircle3').classList.add('active');
 
-            document.getElementById('secondCircle1').classList.toggle('inactive');
-            document.getElementById('secondCircle2').classList.toggle('inactive');
-            document.getElementById('secondCircle3').classList.toggle('inactive');
-            document.getElementById('secondCircle4').classList.toggle('inactive');
-            document.getElementById('secondCircle5').classList.toggle('inactive');
+            document.getElementById('secondCircle1').classList.add('inactive');
+            document.getElementById('secondCircle2').classList.add('inactive');
+            document.getElementById('secondCircle3').classList.add('inactive');
+            document.getElementById('secondCircle4').classList.add('inactive');
+            document.getElementById('secondCircle5').classList.add('inactive');
 
-            document.getElementById('firstCircle1').classList.toggle('inactive3');
-            document.getElementById('firstCircle2').classList.toggle('inactive2');
-            document.getElementById('firstCircle4').classList.toggle('inactive4');
-            document.getElementById('firstCircle5').classList.toggle('inactive5');
+            document.getElementById('firstCircle1').classList.add('inactive3');
+            document.getElementById('firstCircle2').classList.add('inactive2');
+            document.getElementById('firstCircle4').classList.add('inactive4');
+            document.getElementById('firstCircle5').classList.add('inactive5');
 
         } else if (circleData.fourthActive === true) {
-            setCircleData({...circleData, fourthActive: !circleData.fourthActive});
+            setCircleData({...circleData, fourthActive: true});
+            document.getElementById('firstCircle4').classList.add('active');
 
-            document.getElementById('firstCircle4').classList.toggle('active');
+            document.getElementById('secondCircle1').classList.add('inactive');
+            document.getElementById('secondCircle2').classList.add('inactive');
+            document.getElementById('secondCircle3').classList.add('inactive');
+            document.getElementById('secondCircle4').classList.add('inactive');
+            document.getElementById('secondCircle5').classList.add('inactive');
 
-            document.getElementById('secondCircle1').classList.toggle('inactive');
-            document.getElementById('secondCircle2').classList.toggle('inactive');
-            document.getElementById('secondCircle3').classList.toggle('inactive');
-            document.getElementById('secondCircle4').classList.toggle('inactive');
-            document.getElementById('secondCircle5').classList.toggle('inactive');
-
-            document.getElementById('firstCircle1').classList.toggle('inactive4');
-            document.getElementById('firstCircle2').classList.toggle('inactive2');
-            document.getElementById('firstCircle3').classList.toggle('inactive3');
-            document.getElementById('firstCircle5').classList.toggle('inactive5');
+            document.getElementById('firstCircle1').classList.add('inactive4');
+            document.getElementById('firstCircle2').classList.add('inactive2');
+            document.getElementById('firstCircle3').classList.add('inactive3');
+            document.getElementById('firstCircle5').classList.add('inactive5');
 
         } if (circleData.fifthActive === true) {
-                setCircleData({...circleData, fifthActive: !circleData.fifthActive});
+                setCircleData({...circleData, fifthActive: true});
 
-                document.getElementById('firstCircle5').classList.toggle('active');
+                document.getElementById('firstCircle5').classList.add('active');
 
-                document.getElementById('secondCircle1').classList.toggle('inactive');
-                document.getElementById('secondCircle2').classList.toggle('inactive');
-                document.getElementById('secondCircle3').classList.toggle('inactive');
-                document.getElementById('secondCircle4').classList.toggle('inactive');
-                document.getElementById('secondCircle5').classList.toggle('inactive');
+                document.getElementById('secondCircle1').classList.add('inactive');
+                document.getElementById('secondCircle2').classList.add('inactive');
+                document.getElementById('secondCircle3').classList.add('inactive');
+                document.getElementById('secondCircle4').classList.add('inactive');
+                document.getElementById('secondCircle5').classList.add('inactive');
 
-                document.getElementById('firstCircle1').classList.toggle('inactive5');
-                document.getElementById('firstCircle2').classList.toggle('inactive2');
-                document.getElementById('firstCircle3').classList.toggle('inactive3');
-                document.getElementById('firstCircle4').classList.toggle('inactive4');
+                document.getElementById('firstCircle1').classList.add('inactive5');
+                document.getElementById('firstCircle2').classList.add('inactive2');
+                document.getElementById('firstCircle3').classList.add('inactive3');
+                document.getElementById('firstCircle4').classList.add('inactive4');
 
 
             }
-
-            // circleData.firstActive === true && console.log("jestem po 1")
-            // // document.getElementById('firstCircle5').classList.toggle('inactive5');
-            //
-            // circleData.secondActive === true && console.log("jestem po 2")
-            // // document.getElementById('firstCircle5').classList.toggle('inactive2');
-            //
-            // circleData.thirdActive === true && console.log("jestem po 3")
-            // // document.getElementById('firstCircle5').classList.toggle('inactive3');
-            //
-            // circleData.fourthActive === true && console.log("jestem po4")
-            // // document.getElementById('firstCircle5').classList.toggle('inactive4');
-
             e.stopPropagation();
 
         }
-
 
 
     return (
@@ -964,27 +565,27 @@ const AnimatedInfo = () => {
 }
 
 
-    const Fee = ({onClick}) => {
+const Fee = ({onClick}) => {
 
-        return (
-            <>
-                <div className='circles-fees' onClick={onClick}>
-                    <h2>KOSZTY REKRUTACJI:</h2>
-                    <p>85zł - opłata rekrutacyjna</p>
-                    <p>350zł - wpisowe</p>
-                    <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): <strong>80 1020 3352 0000
+    return (
+        <>
+            <div className='circles-fees' onClick={onClick}>
+                <h2>KOSZTY REKRUTACJI:</h2>
+                <p>85zł - opłata rekrutacyjna</p>
+                <p>350zł - wpisowe</p>
+                <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): <strong>80 1020 3352 0000
                         1102 0010 5684</strong></p>
-                </div>
-                <table className='circles-table' onClick={onClick}>
-                    <thead className='circles-table__header'>
+            </div>
+            <table className='circles-table' onClick={onClick}>
+                <thead className='circles-table__header'>
                     <tr className='circles-table__header--row'>
                         <th className='circles-table__header--col1'>Rekrutacja 2021/22</th>
                         <th className='circles-table__header--col2'>Czesne (studia <span
                             className='online'>on-line</span>)
                         </th>
                     </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+                <tbody>
                     <tr className='circles-table__header--row'>
                         <td className='circles-table__header--col1'>I rok studiów</td>
                         <td className='circles-table__header--col2'>350 zł miesięcznie (płatne 12 miesięcy)</td>
@@ -997,16 +598,11 @@ const AnimatedInfo = () => {
                         <td className='circles-table__header--col1'>III rok studiów</td>
                         <td className='circles-table__header--col2'>475 zł miesięcznie (płatne 10 miesięcy)</td>
                     </tr>
-                    </tbody>
-                </table>
-
-            </>
-
-
-        )
-    }
-
-
+                </tbody>
+            </table>
+        </>
+    )
+}
 
 
 export default AnimatedInfo;
