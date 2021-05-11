@@ -1866,6 +1866,109 @@
   }
 }
 
+//Cookies
+
+.cookies {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  z-index: 3;
+  opacity: 0.9;
+
+  .disabled {
+    visibility: hidden;
+    opacity: 0;
+
+  }
+
+
+}
+
+.cookies-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $circles-text-color;
+  background-color: $text-color;
+
+
+  .cookies-text {
+    font-size: 0.9rem;
+    height: 100%;
+
+    padding: 20px;
+
+
+  }
+  .cookies-buttons {
+    display: flex;
+
+    font-size: 0.8rem;
+    padding: 10px;
+
+
+
+
+    .cookies-btn1 {
+      background-color: $fourth-color;
+      width: 60px;
+      height: 60px;
+
+      color: $circles-text-color;
+
+      border-radius: 50%;
+      border: 1px solid $circles-text-color;
+
+      margin-right: 5px;
+
+      cursor: pointer;
+
+      &:hover {
+        font-weight: bold;
+        background-color: darken($fourth-color,20%);
+
+      }
+
+
+
+    }
+    .cookies-btn2{
+      text-decoration: none;
+      background-color: $second-color;
+      text-align: center;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 60px;
+      height: 60px;
+
+      color: $circles-text-color;
+
+
+      border-radius: 50%;
+      border: 1px solid $circles-text-color;
+
+      margin-left: 5px;
+
+      &:hover {
+        font-weight: bold;
+        background-color: darken($second-color,10%);
+
+      }
+
+    }
+
+  }
+
+
+}
+
+
 
 
 

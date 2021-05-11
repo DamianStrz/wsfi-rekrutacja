@@ -15,14 +15,15 @@ body {
 
 #root {
 
-
 }
 
-header, main {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
 
   box-shadow: darken($body-background, 50%) 0 5px 15px;
 

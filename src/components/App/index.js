@@ -1,10 +1,18 @@
 import React from 'react';
 import MainPage from "../MainPage";
+import Cookies from "../Cookies";
 
 
 const App = () => {
 
-    return <MainPage/>
+    return (
+        <>
+            <MainPage/>
+            <Cookies />
+        </>
+
+    )
+
 }
 
 
