@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 
 const AnimatedInfo = () => {
 
-    const recruitmentForm = 'https://dziekanat.wsfi.pl/formularz-rekrutacyjny'
+    const recruitmentForm = 'https://dziekanat.wsfi.pl/formularz-rekrutacyjny';
+
 
     let circle = 0;
 
@@ -499,8 +500,8 @@ const AnimatedInfo = () => {
                             <ul className='circles-list' onClick={handleListClick}>
                                 <li className='circles-list__el' onClick={handleListClick}>Świadectwo dojrzałości,
                                 </li>
-                                <li className='circles-list__el' onClick={handleListClick}>Przesłanie formularza
-                                    Rekrutacji <span className='online'>on-line</span> [przejdź],
+                                <li className='circles-list__el' onClick={handleListClick}>Przesłanie <em>formularza
+                                    Rekrutacji <span className='online'>on-line</span></em>,
                                 </li>
                                 <li className='circles-list__el' onClick={handleListClick}>2 fotografie (35x45 mm,
                                     jedna elektroniczna, format jpg)
@@ -512,21 +513,13 @@ const AnimatedInfo = () => {
                                     opłaty rekrutacyjnej.
                                 </li>
                             </ul>
-                            <h3>Dokumenty należy składać osobiście lub przesłać listem poleconym:</h3>
-                            <p>ŁÓDŹ, 93-587 ul. Wróblewskiego 18/801 (8 piętro, "Urbanica"), tel: 42
-                                639 91 10, 501 016 524, e-mail: dziekanat@wsfi.pl</p>
-                            <p>KALISZ, 62-800 ul. Widok 96a (budynek IV LO), tel: 62 753 56 53, 501
-                                016 529, e-mail: kalisz@wsfi.pl</p>
-                            <p>Można także przesłać skan podpisanych dokumentów (oryginały należy dostarczyć
-                                osobiście lub listem poleconym w terminie
-                                14 dni).</p>
                         </div>
                     }
                 </div>
                 <div className='circles1-right' id='secondCircle1'/>
                 <div className='circles2-left' id='firstCircle2' data-circle={2} onClick={handleCircleClick}>
                     {circleData.secondActive === false
-                        ? 'Formularz rekrutacyjny'
+                        ? <p className='circle-title'>Formularz rekrutacji <br /><span className='online'>on-line</span></p>
                         : <a className='applicationFormLink'
                              href={recruitmentForm}
                              target='_blank'
@@ -539,7 +532,8 @@ const AnimatedInfo = () => {
                 <div className='circles3-left' id='firstCircle3' data-circle={3} onClick={handleCircleClick}>
                     {circleData.thirdActive === false
                         ? 'Terminy'
-                        : <p onClick={handleListClick} className='circle-calendar'>Rekrutacja rusza od 1 czerwca 2021r.</p>
+                        : <p onClick={handleListClick} className='circle-calendar'>
+                            Rekrutacja trwa od 20 maja do 10 października 2021 r.</p>
                     }
                 </div>
                 <div className='circles3-right' id='secondCircle3'/>
@@ -553,7 +547,16 @@ const AnimatedInfo = () => {
                 <div className='circles5-left' id='firstCircle5' data-circle={5} onClick={handleCircleClick}>
                     {circleData.fifthActive === false
                         ? 'Zasady'
-                        : <p onClick={handleListClick} className='circles-five'>Zmiana</p>
+                        : <div onClick={handleListClick} className='circle-rules'>
+                            <h3 className='circle-rules__title'>Dokumenty należy składać osobiście lub przesłać listem poleconym:</h3>
+                            <p className='circle-rules__par'><span className='bold'>ŁÓDŹ:</span> 93-587 ul. Wróblewskiego 18/801 (8 piętro, "Urbanica"), tel: 42
+                                639 91 10, 501 016 524, e-mail: dziekanat@wsfi.pl</p>
+                            <p className='circle-rules__par'><span className='bold'>KALISZ:</span> 62-800 ul. Widok 96a (budynek IV LO), tel: 62 753 56 53, 501
+                                016 529, e-mail: kalisz@wsfi.pl</p>
+                            <p className='circle-rules__par'>Można także przesłać skan podpisanych dokumentów (oryginały należy dostarczyć
+                                osobiście lub listem poleconym w terminie
+                                14 dni).</p>
+                        </div>
                     }
                 </div>
                 <div className='circles5-right' id='secondCircle5'/>
@@ -567,12 +570,19 @@ const AnimatedInfo = () => {
 
 const Fee = ({onClick}) => {
 
+    const specialOffers = 'https://wsfi.pl';
+
     return (
         <>
             <div className='circles-fees' onClick={onClick}>
                 <h2>KOSZTY REKRUTACJI:</h2>
-                <p>85zł - opłata rekrutacyjna</p>
-                <p>350zł - wpisowe</p>
+                <p>85,00 zł - opłata rekrutacyjna</p>
+                <p>350,00 zł - wpisowe (<span className='online bold'>PROMOCJA!!</span> 0,00 zł. do 30 lipca!)</p>
+                <p>Aktualne promocje&nbsp;->&nbsp;
+                    <a className='circles-fees__link'
+                       href={specialOffers}
+                       target='_blank'
+                       rel='noopener noreferrer'><span className='online'>sprawdź</span></a></p>
                 <p>Opłatę rekrutacyjną prosimy wpłacać na konto(PKO BP S.A. 1 O/Łódź): <strong>80 1020 3352 0000
                         1102 0010 5684</strong></p>
             </div>

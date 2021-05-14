@@ -9,16 +9,16 @@ const Slider = () => {
         linkBoxOne: 'https://wsfi.edu.pl/files/rachunkowosc_i_finanse_program.pdf',
         linkBoxOneTitle: 'Program studiów: ',
         linkBoxOneText: 'sprawdź',
-        titleBoxTwo: 'Bankowość',
-        imgTitleBoxTwo: "Bankowość",
+        titleBoxTwo: 'Bankowość i ubezpieczenia',
+        imgTitleBoxTwo: "Bankowość i ubezpieczenia",
         textBoxTwo: 'Bankowość i ubezpieczenia to studia dla przyszłych pracowników banków i instytucji ubezpieczeniowych oraz osób chcących prowadzić własną działalność na rynku dystrybucji produktów bankowych i ubezpieczeniowych jako agenci czy brokerzy. Adresatem są też osoby, które cechuje kreatywność w pracy i umiejętności zarządzania ryzykiem oraz wysoka umiejętność nawiązywania kontaktów z odbiorcami produktów finansowych. Studenci tej specjalności zdobywają wiedzę z zakresu podstawowych produktów bankowych i ubezpieczeniowych, ryzyka w ich alokacji oraz organizacji i znaczenia sektora bankowego i ubezpieczeniowego w gospodarce i funkcjonowaniu podmiotów gospodarczych. Zajęcia prowadzone są przez doświadczonych wykładowców oraz w dużej części przez praktyków z bankowości i ubezpieczeń.',
         linkBoxTwo: 'https://wsfi.edu.pl/files/bankowosc_i_ubezpieczenia_program.pdf',
         linkBoxTwoTitle: 'Program studiów: ',
         linkBoxTwoText: 'sprawdź',
-        titleBoxThree: 'Przedsiębiorczość',
-        imgTitleBoxThree: "Przedsiębiorczość",
-        textBoxThree: 'Przedsiębiorczość dostarcza studentom szeroką wiedzę pozwalającą zaprojektować i uruchomić własną firmę, a także realizować się na polu handlowca/sprzedawcy. WSFI w ostatnich latach współuczestniczyła w założeniu kilkuset mikroprzedsiębiorstw. Nasi wykładowcy i eksperci służyli radą i wsparciem na etapie rejestracji działalności, jak i pierwszych miesięcy funkcjonowania. Zdobytą wiedzą i doświadczeniem dzielimy się z naszymi studentami. W ramach specjalności Przedsiębiorczość studenci mogą wybrać jedną z dwóch ścieżek specjalizacyjnych: \n 1. Organizacja i rozwój firmy \n 2. Menedżer sprzedaży',
-        linkBoxThree: 'https://wsfi.edu.pl/files/przedsiebiorczosc_program.pdf',
+        titleBoxThree: 'Prowadzenie biznesu w UE',
+        imgTitleBoxThree: 'Prowadzenie biznesu w UE',
+        textBoxThree: 'Studia Prowadzenie biznesu w UE przygotowują studentów do pełnienia aktywnej roli w gospodarce w ramach prowadzenia przez nich własnych firm. Studia te mają charakter wybitnie praktyczny: uczą jak zaprojektować i uruchomić działalność gospodarczą, jak pozyskać środki na jej rozwój oraz jak kalkulować jej efektywność. Dodatkowo budują świadomość i postawy niezbędne do pełnienia roli przedsiębiorcy. Specjalność Prowadzenie biznesu w UE uwzględnia także aspekt międzynarodowy prowadzenia działalności. Prowadzenie biznesu w UE to studia dla przyszłych biznesmenów prowadzących własną działalność gospodarczą, nawiązujących kontakty międzynarodowe. Adresatem są osoby chcące przekuć swój zapał i pracowitość we własną działalność biznesową.',
+        linkBoxThree: 'https://wsfi.edu.pl/files/prowadzenie_biznesu_w_ue_program.pdf',
         linkBoxThreeTitle: 'Program studiów: ',
         linkBoxThreeText: 'sprawdź',
     }
@@ -117,10 +117,10 @@ const Slider = () => {
                     <span className='slider-boxes__text'>Rachunkowość i finanse</span>
                 </div>
                 <div className='slider-boxes__box box2' onClick={handleColorChange} id='box-two'>
-                    <span className='slider-boxes__text'>Bankowość</span>
+                    <span className='slider-boxes__text'>Bankowość i ubezpieczenia</span>
                 </div>
                 <div className='slider-boxes__box box3' onClick={handleColorChange} id='box-three'>
-                    <span className='slider-boxes__text'>Przedsiębiorczość</span>
+                    <span className='slider-boxes__text'>Prowadzenie biznesu w UE</span>
                 </div>
             </div>
             {slideData.isActive && <SlideContent isActive={slideData.isActive} slideData={slideData} onClick={handleColorChange}/>}
@@ -133,7 +133,6 @@ const SlideContent = ({slideData,onClick}) => {
     return(
         <div className='slide' onClick={onClick}>
             <div className='slide-content' id='slide' >
-                {/*<div className={`slide-content__img ${slideData.box}`} >{slideData.imgTitle}</div>*/}
                 <div>
                     <h3 className='slide-content__title'>{slideData.title}</h3>
                     <p className='slide-content__text'>{slideData.text}</p>

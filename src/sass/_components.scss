@@ -3,13 +3,6 @@
 
 //Hero
 
-//.hero-background {
-//  background: url(../assets/hero-background-nologo.png) no-repeat center;
-//  background-size: cover;
-//  width: 100%;
-//  height: 400px;
-//}
-
 .container.hero {
   width: 100%;
   background-color: $container-background-color;
@@ -138,7 +131,7 @@
   .hero-list {
     text-align: center;
     list-style-position: inside;
-    color: #000;
+    color: $text-color;
     line-height: 1.8;
     font-size: 1.5rem;
 
@@ -207,6 +200,7 @@
 .slider-boxes {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 30px 0 50px 0;
   width: 100%;
   cursor: pointer;
@@ -1451,14 +1445,16 @@
 
 }
 
-
+.circle-title {
+  pointer-events: none;
+}
 
 .circles-text {
   max-height: 90%;
-  width: 72%;
+  width: 82%;
   max-width: 500px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 0 5px;
   cursor: default;
   color: darken($text-color,20%);
@@ -1487,6 +1483,7 @@
 
   .circles-list__el {
     color: darken($first-color,20%);
+    padding-bottom: 10px;
 
     @include mobile {
       padding-bottom: 10px;
@@ -1512,7 +1509,7 @@
   font-size: 2rem;
   padding: 0 5px;
   cursor: default;
-  color: darken($circle3-background-color,20%);
+  color: darken($circle3-background-color,10%);
 
   animation: reveal 1.3s ease-in forwards;
 
@@ -1543,6 +1540,13 @@
 
     >h2 {
       margin-top: 0;
+    }
+    >p {
+      margin: 8px 0;
+    }
+
+    .circles-fees__link {
+      text-decoration: none;
     }
 }
 
@@ -1575,17 +1579,25 @@
   padding: 4px;
 }
 
-.circles-five {
+.circle-rules {
   max-height: 90%;
   width: 72%;
   max-width: 500px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
   padding: 0 5px;
   cursor: default;
   color: darken($circle5-background-color,20%);
 
   animation: reveal 1.3s ease-in forwards;
+
+  .circle-rules__title{
+    margin-top: 0;
+  }
+
+  .circle-rules__par {
+    margin-bottom: 0;
+  }
 
   @include mobile {
     font-size: 1.6rem;
