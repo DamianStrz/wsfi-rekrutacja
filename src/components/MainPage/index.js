@@ -5,7 +5,6 @@ import Slider from '../Slider'
 import AnimatedInfo from '../AnimatedInfo';
 import Details from '../Details';
 import Footer from '../Footer';
-import Cookies from "../Cookies";
 
 
 const MainPage = () => (

@@ -400,7 +400,8 @@ const AnimatedInfo = () => {
         e.stopPropagation();
 
     }
-        const handleListClick = (e) => {
+
+    const handleListClick = (e) => {
 
         if (circleData.firstActive === true) {
 
@@ -488,7 +489,6 @@ const AnimatedInfo = () => {
 
         }
 
-
     return (
         <div className='container circles'>
             <h1 className='circles-title'>Zasady rekrutacji</h1>
@@ -519,7 +519,7 @@ const AnimatedInfo = () => {
                 <div className='circles1-right' id='secondCircle1'/>
                 <div className='circles2-left' id='firstCircle2' data-circle={2} onClick={handleCircleClick}>
                     {circleData.secondActive === false
-                        ? <p className='circle-title'>Formularz rekrutacji <br /><span className='online'>on-line</span></p>
+                        ? <p className='circle-title'>Formularz rekrutacji&nbsp;<span className='online'>on-line</span></p>
                         : <a className='applicationFormLink'
                              href={recruitmentForm}
                              target='_blank'
@@ -549,9 +549,9 @@ const AnimatedInfo = () => {
                         ? 'Zasady'
                         : <div onClick={handleListClick} className='circle-rules'>
                             <h3 className='circle-rules__title'>Dokumenty należy składać osobiście lub przesłać listem poleconym:</h3>
-                            <p className='circle-rules__par'><span className='bold'>ŁÓDŹ:</span> 93-587 ul. Wróblewskiego 18/801 (8 piętro, "Urbanica"), tel: 42
+                            <p className='circle-rules__par'><span className='bold'>ŁÓDŹ:</span> 93-587, ul. Wróblewskiego 18/801 (8 piętro, "Urbanica"), tel: 42
                                 639 91 10, 501 016 524, e-mail: dziekanat@wsfi.pl</p>
-                            <p className='circle-rules__par'><span className='bold'>KALISZ:</span> 62-800 ul. Widok 96a (budynek IV LO), tel: 62 753 56 53, 501
+                            <p className='circle-rules__par'><span className='bold'>KALISZ:</span> 62-800, ul. Widok 96a (budynek IV LO), tel: 62 753 56 53, 501
                                 016 529, e-mail: kalisz@wsfi.pl</p>
                             <p className='circle-rules__par'>Można także przesłać skan podpisanych dokumentów (oryginały należy dostarczyć
                                 osobiście lub listem poleconym w terminie

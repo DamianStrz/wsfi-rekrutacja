@@ -1,6 +1,114 @@
 @import "base";
 @import "media";
 
+//Popup
+
+.popup {
+  position: fixed;
+  background: rgba(94, 100, 100, 0.8);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  z-index: 4;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.popup-box {
+  position: relative;
+  width: 500px;
+  height:500px;
+
+  border-radius: 50%;
+  background-color: $first-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid $circles-text-color;
+
+  overflow: auto;
+
+  @include mobile {
+    width: 300px;
+    height: 300px;
+
+  }
+
+  @include tablet {
+    width: 450px;
+    height: 450px;
+
+  }
+
+}
+
+
+.popup-title {
+  text-transform: uppercase;
+  color: $second-color;
+
+  animation: reveal 0.5s ease-in;
+
+  font-size: 48px;
+  text-align: center;
+  user-select: none;
+
+  @include mobile {
+    font-size: 36px;
+
+  }
+
+  @include tablet {
+    font-size: 42px;
+
+  }
+}
+
+.popup-close {
+
+  position: absolute;
+  right: 15%;
+  top: 15%;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  background: $circles-text-color;
+  border: 2px solid $first-color;
+
+  text-align: center;
+  font-size: 20px;
+  color: $first-color;
+  line-height: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &:hover {
+    background: $fourth-color;
+    color: $circles-text-color;
+    border: 2px solid $circles-text-color;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 20px;
+
+  }
+}
+
+
 //Hero
 
 .container.hero {
@@ -665,8 +773,8 @@
 
   .circles2-left {
 
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     background-color: $circle2-background-color;
 
     cursor: pointer;
@@ -1447,13 +1555,14 @@
 
 .circle-title {
   pointer-events: none;
+  padding: 5px;
 }
 
 .circles-text {
   max-height: 90%;
   width: 82%;
   max-width: 500px;
-  text-align: center;
+
   font-size: 1.4rem;
   padding: 0 5px;
   cursor: default;
@@ -1471,14 +1580,13 @@
 .circles-list {
   margin: 0;
   list-style-position: inside;
-  list-style-type: pointer;
   padding: 0;
+  text-align: center;
 
 
   @include mobile {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
-    width: 90%;
   }
 
   .circles-list__el {
@@ -1536,6 +1644,7 @@
     @include mobile {
 
       animation: reveal 1s ease-in forwards;
+
     }
 
     >h2 {
@@ -1587,21 +1696,22 @@
   font-size: 1.2rem;
   padding: 0 5px;
   cursor: default;
-  color: darken($circle5-background-color,20%);
+  color: darken($circle5-background-color, 20%);
 
   animation: reveal 1.3s ease-in forwards;
 
-  .circle-rules__title{
+  @include mobile {
+    animation: reveal 1s ease-in forwards;
+
+    font-size: 1.2rem;
+  }
+
+  .circle-rules__title {
     margin-top: 0;
   }
 
   .circle-rules__par {
     margin-bottom: 0;
-  }
-
-  @include mobile {
-    font-size: 1.6rem;
-    animation: reveal 1s ease-in forwards;
   }
 }
 
