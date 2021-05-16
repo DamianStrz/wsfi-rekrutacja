@@ -100,6 +100,8 @@ const Slider = () => {
             box: e.target.id
         });
 
+
+
         e.target.id === 'slide' && setSlideData({...slideData, isActive: !slideData.isActive,});
 
 
