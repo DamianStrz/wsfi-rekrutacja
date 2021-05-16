@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 const Popup = () => {
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(sessionStorage.getItem("popupIsOpen"));
+
+    useEffect(() => {
+
+        // setIsOpen(sessionStorage.getItem("popupIsOpen"))
+    },[])
 
     const handleClose = () => {
-        setIsOpen(!isOpen);
+        sessionStorage.setItem("popupIsOpen", "false");
+        setIsOpen(sessionStorage.getItem("popupIsOpen"));
+
+        console.log(isOpen);
+
     }
 
     return (
         <>
-            {isOpen &&
+            {isOpen !== "false" &&
                 <div className='popup'>
                     <div className='popup-box'>
                         <h1 className='popup-title'>Wejdź w świat studiów online</h1>
