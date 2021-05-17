@@ -22,11 +22,11 @@ const Popup = () => {
         <>
             {isOpen !== "false" &&
                 <div className='popup'>
+                    <div className='popup-close' onClick={handleClose}>
+                        <i className="fa fa-close"></i>
+                    </div>
                     <div className='popup-box'>
                         <h1 className='popup-title'>Daj się wkręcić w studia on-line!</h1>
-                        <div className='popup-close' onClick={handleClose}>
-                            <i className="fa fa-check"></i>
-                        </div>
                     </div>
                 </div>
             }
