@@ -11,12 +11,9 @@
   top: 0;
   left: 0;
 
-  box-shadow: inset 0 0 0 500px rgba(255, 255, 255, 0.6);
-
-
+  box-shadow: inset 0 0 0 500px rgba(94, 100, 100, 0.7);
 
   z-index: 4;
-
 
   display: flex;
   justify-content: center;
@@ -30,13 +27,17 @@
   height:500px;
 
   border-radius: 50%;
-  background-color: $first-color;
+  background: url(../assets/popup-background.png) no-repeat center;
+  background-size: cover;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border: 2px solid $circles-text-color;
+
+  box-shadow: 0 10px 12px 0 rgba(20, 20, 20, 0.7);
+
 
   overflow: auto;
 
@@ -57,13 +58,15 @@
 
 .popup-title {
   text-transform: uppercase;
-  color: $second-color;
+  color: #F79800;
+  width: 50%;
 
   animation: reveal 0.5s ease-in;
 
-  font-size: 48px;
+  font-size: 54px;
   text-align: center;
   user-select: none;
+  line-height: 1.5;
 
   @include mobile {
     font-size: 36px;
@@ -1719,6 +1722,16 @@
 
   .circle-rules__par {
     margin-bottom: 0;
+  }
+
+  .circle-rules__link {
+    text-decoration: none;
+    color: darken($circle5-background-color, 20%);;
+
+    &:hover {
+      color: lighten($circle5-background-color, 1%);
+    }
+
   }
 }
 

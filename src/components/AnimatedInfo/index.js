@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
+import recruitmentRules from '../../files/Regulamin Rekrutacji 2021-2022.doc';
 
 const AnimatedInfo = () => {
 
@@ -556,6 +557,13 @@ const AnimatedInfo = () => {
                             <p className='circle-rules__par'>Można także przesłać skan podpisanych dokumentów (oryginały należy dostarczyć
                                 osobiście lub listem poleconym w terminie
                                 14 dni).</p>
+                            <p className='circle-rules__par'>Sprawdź&nbsp;
+                                <a href={recruitmentRules}
+                                   className='circle-rules__link'
+                                   target='_blank'
+                                   rel='noopener noreferrer'>Regulamin rekrutacji</a>.
+                            </p>
+
                         </div>
                     }
                 </div>
