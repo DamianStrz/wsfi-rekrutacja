@@ -53,17 +53,22 @@
 
   }
 
+  @include xlarge {
+    width: 600px;
+    height: 600px;
+  }
+
 }
 
 
 .popup-title {
   text-transform: uppercase;
   color: #F79800;
-  width: 50%;
+  width: 45%;
 
   animation: reveal 0.5s ease-in;
 
-  font-size: 54px;
+  font-size: 58px;
   text-align: center;
   user-select: none;
   line-height: 1.5;
@@ -78,6 +83,10 @@
     font-size: 42px;
     line-height: 1.4;
 
+  }
+
+  @include xlarge {
+    font-size: 72px;
   }
 }
 
