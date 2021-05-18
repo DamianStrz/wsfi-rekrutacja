@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import linkBackground from "../../assets/logo-wsfi.jpg";
 
 const Footer = () => {
 
-    const [rodo, setRodo] = useState('https://www.wsfi.edu.pl/files/obowiazek_informacyjny_studia.pdf')
+    const rodo = 'https://www.wsfi.edu.pl/files/obowiazek_informacyjny_studia.pdf';
 
 
     return (

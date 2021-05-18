@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 
 const Popup = () => {
 
     const [isOpen, setIsOpen] = useState(sessionStorage.getItem("popupIsOpen"));
-
-    useEffect(() => {
-
-        // setIsOpen(sessionStorage.getItem("popupIsOpen"))
-    },[])
 
     const handleClose = () => {
         sessionStorage.setItem("popupIsOpen", "false");

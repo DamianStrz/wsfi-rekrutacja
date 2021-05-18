@@ -127,8 +127,14 @@
   }
 
   @include tablet {
-    right: 10%;
-    top: 10%;
+    left: 80%;
+    top: 15%;
+  }
+
+  @include xlarge {
+    left: 65%;
+    top: 15%;
+
   }
 
 }
