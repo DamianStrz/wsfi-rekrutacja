@@ -419,17 +419,35 @@
 
   }
 
+  &.box4 {
+    background-image: url('../assets/slider-img4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+  }
+
+  &.box5 {
+    background-image: url('../assets/slider-img5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+  }
+
   .slider-boxes__text {
     color: $sliderbox-text-color;
     pointer-events: none;
 
   }
 
+
+
   &:hover {
     width: 32%;
     height: 240px;
     opacity: 1;
-    font-size: 28px;
+    font-size: 26px;
 
     @include mobile {
       width: 90%;

@@ -21,6 +21,18 @@ const Slider = () => {
         linkBoxThree: 'https://wsfi.edu.pl/files/prowadzenie_biznesu_w_ue_program.pdf',
         linkBoxThreeTitle: 'Program studiów: ',
         linkBoxThreeText: 'sprawdź',
+        titleBoxFour: 'Kadry i płace',
+        imgTitleBoxTFour: 'Kadry i płące',
+        textBoxFour: 'Kadry i płace to studia przygotowujące do jednego z najbardziej poszukiwanych zawodów na rynku pracy. Obsługa kadrowo-płacowa jest najważniejszym elementem oferty każdego zespołu księgowego. Dlatego specjaliści z tego zakresu są od lat bardzo poszukiwani przez pracodawców. Studia Kadry i płace na naszej Uczelni przygotowują ekspertów na najwyższym poziomie. Od lat jesteśmy liderem w kształceniu kadr księgowych. Studia Kadry i płace zainteresują przede wszystkim osoby wiążące swoją przyszłość z karierą w księgowości i finansach oraz osoby aspirujące do stanowisk kierowniczych.',
+        linkBoxFour: 'https://wsfi.edu.pl/files/kadry_i_place_program.pdf',
+        linkBoxFourTitle: 'Program studiów: ',
+        linkBoxFourText: 'sprawdź',
+        titleBoxFive: 'Gospodarowanie nieruchomościami',
+        imgTitleBoxFive: 'Gospodarowanie nieruchomościami',
+        textBoxFive: 'Studia Gospodarowanie nieruchomościami odpowiadają na potrzebę kształcenia specjalistów zajmujących się obrotem i zarządzaniem nieruchomościami. To obecnie jeden z najszybciej rozwijających się obszarów gospodarki. Na studiach Gospodarowanie nieruchomościami studenci poznają m.in. sposoby wycen nieruchomości, nabywają umiejętności tworzenia ofert sprzedażowych. Absolwenci potrafią w pełni samodzielnie prowadzić działalność na rynku nieruchomości. Studia Gospodarowanie nieruchomościami skierowane są do osób, które swoją karierę zawodową wiążą z branżą obrotu i zarządzaniem nieruchomościami, chcą poznać tajniki robienia biznesu na rynku mieszkaniowym oraz nabyć ekonomiczne podstawy projektów budowy i sprzedaży mieszkań i osiedli.',
+        linkBoxFive: 'https://wsfi.edu.pl/files/gospodarowanie_nieruchomosciami_program.pdf',
+        linkBoxFiveTitle: 'Program studiów: ',
+        linkBoxFiveText: 'sprawdź',
     }
 
     const [slideData, setSlideData] = useState({
@@ -100,6 +112,51 @@ const Slider = () => {
             box: e.target.id
         });
 
+        (e.target.id === 'box-four' && slideData.isActive === false) && setSlideData({
+            ...slideData,
+            isActive: !slideData.isActive,
+            imgTitle: data.imgTitleBoxFour,
+            title: data.titleBoxFour,
+            text: data.textBoxFour,
+            link: data.linkBoxFour,
+            linkTitle: data.linkBoxFourTitle,
+            linkText: data.linkBoxFourText,
+            box: e.target.id
+        });
+
+        (e.target.id === 'box-four' && slideData.isActive === true) && setSlideData({
+            ...slideData,
+            imgTitle: data.imgTitleBoxFour,
+            title: data.titleBoxFour,
+            text: data.textBoxFour,
+            link: data.linkBoxFour,
+            linkTitle: data.linkBoxFourTitle,
+            linkText: data.linkBoxFourText,
+            box: e.target.id
+        });
+
+        (e.target.id === 'box-five' && slideData.isActive === false) && setSlideData({
+            ...slideData,
+            isActive: !slideData.isActive,
+            imgTitle: data.imgTitleBoxFive,
+            title: data.titleBoxFive,
+            text: data.textBoxFive,
+            link: data.linkBoxFive,
+            linkTitle: data.linkBoxFiveTitle,
+            linkText: data.linkBoxFiveText,
+            box: e.target.id
+        });
+
+        (e.target.id === 'box-five' && slideData.isActive === true) && setSlideData({
+            ...slideData,
+            imgTitle: data.imgTitleBoxFive,
+            title: data.titleBoxFive,
+            text: data.textBoxFive,
+            link: data.linkBoxFive,
+            linkTitle: data.linkBoxFiveTitle,
+            linkText: data.linkBoxFiveText,
+            box: e.target.id
+        });
 
 
         e.target.id === 'slide' && setSlideData({...slideData, isActive: !slideData.isActive,});
@@ -123,6 +180,12 @@ const Slider = () => {
                 </div>
                 <div className='slider-boxes__box box3' onClick={handleColorChange} id='box-three'>
                     <span className='slider-boxes__text'>Prowadzenie biznesu w UE</span>
+                </div>
+                <div className='slider-boxes__box box4' onClick={handleColorChange} id='box-four'>
+                    <span className='slider-boxes__text'>Kadry i płace</span>
+                </div>
+                <div className='slider-boxes__box box5' onClick={handleColorChange} id='box-five'>
+                    <span className='slider-boxes__text'>Gospodarowanie nieruchomościami</span>
                 </div>
             </div>
             {slideData.isActive && <SlideContent isActive={slideData.isActive} slideData={slideData} onClick={handleColorChange}/>}
